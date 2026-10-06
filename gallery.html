@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery | Seaside Guest House - Kumta, Karnataka</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0F1218',
+              surface: '#151A22',
+              card: '#1C2330',
+              primary: '#C4613A',
+              primaryHover: '#D4724A',
+              accent: '#E8956D',
+              cream: '#F5F0EA',
+              secondary: '#B8B0A8',
+              muted: '#7A7268',
+              whatsapp: '#25D366',
+              divider: '#2A3040'
+            }
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {},
+          fontFamily: {
+            serif: ["'Playfair Display'", "Georgia", "serif"],
+            sans: ["Inter", "sans-serif"],
+            headline: ["'Playfair Display'", "serif"],
+            display: ["'Playfair Display'", "serif"],
+            body: ["Inter", "sans-serif"],
+            label: ["Inter", "sans-serif"]
+          },
+          fontSize: {}
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #0F1218;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #2A3040;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #C4613A;
+    }
+    
+    /* Elegant Motion Suite */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+      50% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    }
+    
+    .animate-float-slow {
+      animation: floatSlow 6s ease-in-out infinite;
+    }
+    .animate-pulse-glow {
+      animation: pulseGlow 3s infinite;
+    }
+    
+    /* Scroll Reveal System */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .stagger-1 { transition-delay: 100ms; }
+    .stagger-2 { transition-delay: 200ms; }
+    .stagger-3 { transition-delay: 300ms; }
+    .stagger-4 { transition-delay: 400ms; }
+    
+    /* Navbar Scroll Elevation */
+    header.scrolled {
+      background: rgba(15, 18, 24, 0.96) !important;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7) !important;
+      border-color: rgba(42, 48, 64, 0.95) !important;
+    }
+  </style>
+</head>
+<body class="bg-[#0F1218] text-[#F5F0EA] font-body selection:bg-[#C4613A] selection:text-white antialiased">
+<!-- ========================================================================= -->
+<!-- 1. FIXED NAVBAR (TopNavBar Component Anchor)                               -->
+<!-- ========================================================================= -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-[#0F1218]/90 backdrop-blur-md border-b border-[#2A3040]/80 shadow-lg shadow-black/20 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between h-20 w-full">
+    <!-- Brand Logo -->
+    <a class="flex items-center gap-2.5 group cursor-pointer flex-shrink-0" href="index.html">
+      <span class="material-symbols-outlined text-amber-500 text-2xl sm:text-3xl group-hover:rotate-12 transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">sailing</span>
+      <span class="font-serif italic text-xl sm:text-2xl font-bold tracking-tight text-amber-500 group-hover:text-amber-400 transition-colors whitespace-nowrap">
+        Seaside Guest House
+      </span>
+    </a>
+    
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium tracking-wide">
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="index.html">
+        Home
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="index.html#about">
+        About
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="rooms.html">
+        Rooms
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="index.html#amenities">
+        Amenities
+      </a>
+      <a class="text-amber-500 font-semibold border-b-2 border-amber-500 pb-1" href="gallery.html">
+        Gallery
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="location.html">
+        Location
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="contact.html">
+        Contact
+      </a>
+    </nav>
+
+    <!-- Trailing Action Buttons -->
+    <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+      <!-- Secondary: Chat on WhatsApp -->
+      <a class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-semibold bg-[#25D366]/15 hover:bg-[#25D366] text-[#25D366] hover:text-white border border-[#25D366]/30 transition-all duration-200 active:scale-95 shadow-sm animate-pulse-glow" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined text-base">chat</span>
+        <span>Chat on WhatsApp</span>
+      </a>
+      <!-- Primary: Book Now -->
+      <a class="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium uppercase tracking-wider bg-[#C4613A] hover:bg-[#D4724A] text-white shadow-md shadow-[#C4613A]/25 transition-all duration-200 active:scale-95" href="contact.html#reservation-form">
+        <span>Book Now</span>
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
+      <!-- Mobile Hamburger Toggle -->
+      <button aria-label="Toggle navigation" class="lg:hidden text-stone-200 hover:text-amber-500 focus:outline-none p-1.5 transition-colors" id="mobile-menu-btn">
+        <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="hidden lg:hidden bg-[#0F1218]/98 backdrop-blur-xl border-b border-neutral-800 px-6 py-6 space-y-4 shadow-2xl transition-all duration-300" id="mobile-menu">
+    <div class="flex flex-col space-y-3 font-medium">
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="index.html">Home</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="index.html#about">About</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="rooms.html">Rooms</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="index.html#amenities">Amenities</a>
+      <a class="text-amber-500 font-semibold py-1 border-l-2 border-amber-500 pl-3" href="gallery.html">Gallery</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="location.html">Location</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="contact.html">Contact</a>
+    </div>
+    <div class="pt-4 border-t border-[#2A3040] flex flex-col gap-3">
+      <a class="inline-flex items-center justify-center gap-2 py-2.5 rounded-full text-sm font-semibold bg-[#25D366] text-white" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined text-base">chat</span>
+        Chat on WhatsApp
+      </a>
+      <a class="inline-flex items-center justify-center py-2.5 rounded-full text-sm font-medium bg-[#C4613A] text-white" href="contact.html#reservation-form">
+        Book Now
+      </a>
+    </div>
+  </div>
+</header>
+<!-- ========================================================================= -->
+<!-- 2. HERO SECTION                                                          -->
+<!-- ========================================================================= -->
+<section class="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden bg-gradient-to-b from-[#0B0D12] via-[#0F1218] to-[#151A22]">
+<!-- Ambient glowing backdrop spots -->
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#C4613A]/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute -top-12 right-10 w-96 h-96 bg-[#E8956D]/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
+<!-- Kicker Pill Badge -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C2330] border border-[#2A3040] text-[#E8956D] text-xs font-semibold tracking-wider uppercase mb-6 shadow-inner">
+<span class="w-1.5 h-1.5 rounded-full bg-[#C4613A] animate-pulse"></span>
+<span>KUMTA, KARNATAKA, INDIA • VISUAL JOURNEY</span>
+</div>
+<!-- Main Headline in Playfair Display -->
+<h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#F5F0EA] mb-6 leading-[1.15]">
+        Gallery
+      </h1>
+<!-- Subtitle -->
+<p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-[#B8B0A8] font-light leading-relaxed mb-8">
+        A visual journey through Seaside — the backwaters, the sea, the lush greenery, and the warm rooms of Kumta.
+      </p>
+<!-- Key feature pills -->
+<div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm text-[#7A7268]">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[#C4613A] text-lg">house</span>
+<span>Authentic Coastal Heritage</span>
+</div>
+<span class="text-[#2A3040] hidden sm:inline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[#C4613A] text-lg">waves</span>
+<span>Aghanashini Backwaters</span>
+</div>
+<span class="text-[#2A3040] hidden sm:inline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[#C4613A] text-lg">nature_people</span>
+<span>Arabian Sea Tranquility</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 3. FILTER TABS BAR                                                        -->
+<!-- ========================================================================= -->
+<section class="sticky top-20 z-40 bg-[#0F1218]/90 backdrop-blur-md border-y border-[#2A3040] py-4 transition-all duration-200">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto custom-scrollbar pb-1 sm:pb-0" id="filter-container">
+<!-- Filter Tab: All -->
+<button class="gallery-tab active inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 bg-[#C4613A] text-[#F5F0EA] shadow-md shadow-[#C4613A]/20" onclick="filterGallery('all', this)">
+<span>All</span>
+<span class="text-xs px-1.5 py-0.5 rounded-full bg-black/25 font-normal">13</span>
+</button>
+<!-- Filter Tab: Exteriors -->
+<button class="gallery-tab inline-flex items-center gap-2 px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 bg-[#1C2330] text-[#B8B0A8] hover:text-[#F5F0EA] hover:bg-[#252E3E] border border-[#2A3040]" onclick="filterGallery('exteriors', this)">
+<span>Exteriors</span>
+<span class="text-xs px-1.5 py-0.5 rounded-full bg-white/5 font-normal">3</span>
+</button>
+<!-- Filter Tab: Rooms -->
+<button class="gallery-tab inline-flex items-center gap-2 px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 bg-[#1C2330] text-[#B8B0A8] hover:text-[#F5F0EA] hover:bg-[#252E3E] border border-[#2A3040]" onclick="filterGallery('rooms', this)">
+<span>Rooms</span>
+<span class="text-xs px-1.5 py-0.5 rounded-full bg-white/5 font-normal">3</span>
+</button>
+<!-- Filter Tab: Views -->
+<button class="gallery-tab inline-flex items-center gap-2 px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 bg-[#1C2330] text-[#B8B0A8] hover:text-[#F5F0EA] hover:bg-[#252E3E] border border-[#2A3040]" onclick="filterGallery('views', this)">
+<span>Views</span>
+<span class="text-xs px-1.5 py-0.5 rounded-full bg-white/5 font-normal">4</span>
+</button>
+<!-- Filter Tab: Surroundings -->
+<button class="gallery-tab inline-flex items-center gap-2 px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 bg-[#1C2330] text-[#B8B0A8] hover:text-[#F5F0EA] hover:bg-[#252E3E] border border-[#2A3040]" onclick="filterGallery('surroundings', this)">
+<span>Surroundings</span>
+<span class="text-xs px-1.5 py-0.5 rounded-full bg-white/5 font-normal">3</span>
+</button>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 4. RICH PHOTO GALLERY GRID                                                -->
+<!-- ========================================================================= -->
+<main class="max-w-7xl mx-auto px-6 md:px-12 py-16">
+<!-- Active Category Banner Indicator -->
+<div class="flex items-center justify-between mb-8 pb-4 border-b border-[#2A3040]">
+<div>
+<h2 class="font-serif text-2xl md:text-3xl font-bold text-[#F5F0EA]" id="current-category-title">Curated Collection</h2>
+<p class="text-sm text-[#7A7268] mt-1">Glimpses of coastal serenity in Kumta, Karnataka</p>
+</div>
+<span class="text-xs tracking-wider uppercase text-[#B8B0A8] px-3 py-1 rounded bg-[#151A22] border border-[#2A3040]">
+        13 Captures
+      </span>
+</div>
+<!-- Masonry-style Bento Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" id="gallery-grid">
+<!-- ================= GROUP C: THE ROOMS (FEATURED HERO CARD 1) ================= -->
+<!-- Card 8: Master Heritage Bedroom (Uses https://lh3.googleusercontent.com/aida/AEtjO1V4JbNlET2Kl_qxwMWKXSQ-TYpYUzvjbgVPtaFvcXnC_mODkAcYSEbu_ttsMbS6tDegrMpn9p9lmQlB7VCMIwjCKaCcXAd0X71_0EyuBMS6aPuqBQK4MkYVipCq88wKN0CGAOfdI46Dng_qGDHGGwNLKSYayPMjVYqE-4-t-KcL4hG7f0rCH3Iline-xt1tKc_q-TN1Cgb1A-Fng3I-FYw6chqusMEENMPoddNt1opDVDu4HSYG9N0e8Wg) -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 sm:col-span-2 lg:col-span-2 shadow-lg" data-category="rooms">
+<div class="relative aspect-[16/9] w-full overflow-hidden bg-[#151A22]">
+<img alt="Master Heritage Bedroom at Seaside Guest House Kumta" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" src="images/bedroom-window.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-[#0F1218]/30 to-transparent opacity-85 group-hover:opacity-75 transition-opacity"></div>
+<!-- Category Pill -->
+<div class="absolute top-4 left-4 z-10">
+<span class="px-3 py-1 rounded-full text-xs font-medium bg-[#C4613A] text-[#F5F0EA] shadow-md">
+              The Rooms • Master Heritage
+            </span>
+</div>
+<!-- Bottom Caption Overlay -->
+<div class="absolute bottom-0 inset-x-0 p-6 z-10">
+<div class="flex items-end justify-between">
+<div>
+<span class="text-xs uppercase tracking-widest text-[#E8956D] font-semibold">Interiors &amp; Suites</span>
+<h3 class="font-serif text-xl sm:text-2xl font-bold text-[#F5F0EA] mt-1">Master Heritage Bedroom</h3>
+<p class="text-sm text-[#B8B0A8] max-w-lg mt-1 line-clamp-2">
+                  Carved teak four-poster bed with romantic mosquito netting, rustic terracotta floor tiles, and tall wooden window shutters opening directly to the calm Aghanashini river at twilight.
+                </p>
+</div>
+<button class="hidden sm:flex items-center justify-center w-10 h-10 rounded-full bg-[#1C2330]/80 backdrop-blur-md text-[#F5F0EA] border border-[#2A3040] group-hover:bg-[#C4613A] transition-colors">
+<span class="material-symbols-outlined text-lg">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= GROUP A: THE SETTING (CARD 1) ================= -->
+<!-- Card 1: Backwater Estuary View at Sunrise -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="views">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A serene sunrise over the Aghanashini backwater estuary in Kumta, Karnataka, India. The calm water mirrors warm golden morning light with deep terracotta and amber undertones. Majestic coconut palm silhouettes fringe the riverbank under a softly clouded tropical sky, radiating peace and coastal tranquility in an elegant dark-toned aesthetic." src="images/waterfront.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">
+              The Setting • Views
+            </span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10">
+<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Aghanashini Estuary Sunrise</h3>
+<p class="text-xs text-[#B8B0A8] mt-1">Calm morning waters reflecting dawn skies amidst coconut palm groves.</p>
+</div>
+</div>
+</div>
+<!-- ================= GROUP C: THE ROOMS (CARD 9 - FEATURED 2) ================= -->
+<!-- Card 9: Garden Suite Bedroom (Uses https://lh3.googleusercontent.com/aida/AEtjO1VHGekRmO5wPwV1JcZymQa_v1gm9cVZdLeKi_4Y_TqWMaE6uFJGGwpCXi2pjj7wsEvwAc_MRgkMWCdhSDNhvRmusSXDjb8TLCx19J3B6INxdtfzleEayiUhne6dkM7dkISHGRitR3d8CtpgrBeokS10Mxv8n3jWEH3WF5T1l-tsms1IJ1_kJ7M4FBBE4wm5F0SOOckOAh2I_4qiTTLFYnAOBZCQD2dzXsGOYdc7l3tgMWgj1DyV87RhvxI) -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 sm:col-span-2 lg:col-span-2 shadow-lg" data-category="rooms">
+<div class="relative aspect-[16/9] w-full overflow-hidden bg-[#151A22]">
+<img alt="Garden Suite bedroom veranda at Seaside Guest House Kumta" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" src="images/balcony.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-[#0F1218]/30 to-transparent opacity-85 group-hover:opacity-75 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-3 py-1 rounded-full text-xs font-medium bg-[#C4613A] text-[#F5F0EA] shadow-md">
+              The Rooms • Garden Suite
+            </span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-6 z-10">
+<div class="flex items-end justify-between">
+<div>
+<span class="text-xs uppercase tracking-widest text-[#E8956D] font-semibold">Balcony &amp; Veranda</span>
+<h3 class="font-serif text-xl sm:text-2xl font-bold text-[#F5F0EA] mt-1">Garden Suite Tropical Veranda</h3>
+<p class="text-sm text-[#B8B0A8] max-w-lg mt-1 line-clamp-2">
+                  Double french glass doors welcoming fresh sea breezes, cane wicker seating, flowering bougainvillea, and sea views across lush tropical vegetation.
+                </p>
+</div>
+<button class="hidden sm:flex items-center justify-center w-10 h-10 rounded-full bg-[#1C2330]/80 backdrop-blur-md text-[#F5F0EA] border border-[#2A3040] group-hover:bg-[#C4613A] transition-colors">
+<span class="material-symbols-outlined text-lg">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= GROUP B: THE PROPERTY (CARD 5) ================= -->
+<!-- Card 5: Guest House Exterior Mangalore Tiled Roof -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="exteriors">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional heritage coastal guest house in Kumta, Karnataka, showcasing red clay Mangalore tiled roof, warm earthy ochre and terracotta masonry walls, and wooden column veranda. Towering coconut trees and blooming hibiscus border the peaceful estate under a dramatic twilight sky, with ambient warm porch lanterns glowing gently." src="images/exterior.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">
+              The Property • Exterior
+            </span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10">
+<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Mangalore Tile Architecture</h3>
+<p class="text-xs text-[#B8B0A8] mt-1">Earthy ochre walls and classic red-clay gabled rooflines amidst palms.</p>
+</div>
+</div>
+</div>
+<!-- ================= GROUP A: THE SETTING (CARD 2) ================= -->
+<!-- Card 2: Coastal Road Alongside Arabian Sea -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="views">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A scenic narrow coastal road winding along the Arabian Sea coast in Kumta, Karnataka. Towering wild coconut palms lean gently towards rolling sea waves crashing against dark laterite rocks. Golden hour sunlight filters through palm fronds creating deep moody shadows and rich amber reflections on wet asphalt." src="images/coastalroad.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">
+              The Setting • Views
+            </span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10">
+<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Coastal Palm Highway</h3>
+<p class="text-xs text-[#B8B0A8] mt-1">The coastal byway running parallel to the rhythmic Arabian Sea tide.</p>
+</div>
+</div>
+</div>
+<!-- ================= GROUP B: THE PROPERTY (CARD 6) ================= -->
+<!-- Card 6: Wooden Veranda & Sit-out Balcony -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="exteriors">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A tranquil wooden sit-out veranda at a heritage coastal boutique villa overlooking a calm backwater river in Karnataka. Comfortable cane wicker armchairs with handmade ethnic cushions sit near a low tea table, adorned with clay planters of lush green ferns, surrounded by open wooden balustrades under a sheltered timber ceiling." src="images/balcony.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">
+              The Property • Sit-out
+            </span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10">
+<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Riverview Sit-out Veranda</h3>
+<p class="text-xs text-[#B8B0A8] mt-1">Hand-carved wooden balustrades and rattan seating for quiet sunsets.</p>
+</div>
+</div>
+</div>
+<!-- ================= GROUP A: THE SETTING (CARD 3) ================= -->
+<!-- Card 3: Rocky Kumta Shoreline -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="views">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Dramatic laterite rock formations and rocky Kumta shoreline in coastal Karnataka. Azure ocean waves foam against weathered reddish-brown stone outcrops, with vibrant tropical green hills cascading down to meet the pristine sea water under an atmospheric dusk sky." src="images/seapath.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">
+              The Setting • Shoreline
+            </span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10">
+<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Kumta Rocky Headlands</h3>
+<p class="text-xs text-[#B8B0A8] mt-1">Rugged laterite stone cliffs framing peaceful turquoise ocean waters.</p>
+</div>
+</div>
+</div>
+<!-- ================= GROUP B: THE PROPERTY (CARD 7) ================= -->
+<!-- Card 7: Traditional Wooden Front Gate & Garden Path -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="exteriors">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional antique Indian wooden gate and laterite stone entry pathway leading into a lush tropical botanical garden in Kumta. Rich bougainvillea, areca palm trees, and brass oil lamps accent the entrance of Seaside guest house, radiating warm coastal hospitality with deep dark shadows and warm lighting." src="images/streetview.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">
+              The Property • Entrance
+            </span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10">
+<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Botanical Garden Gateway</h3>
+<p class="text-xs text-[#B8B0A8] mt-1">Handcrafted timber gate amidst blooming coastal flora and stone paths.</p>
+</div>
+</div>
+</div>
+<!-- ================= GROUP C: THE ROOMS (CARD 10) ================= -->
+<!-- Card 10: En-suite Bathroom Interior -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An elegant boutique bathroom interior in a coastal guest house featuring natural dark slate stone tiles, warm polished teak vanity counter, and a stone basin with brass fixtures. Warm soft ambient wall sconce lighting accentuates handcrafted brass mirrors and modern amenities with 24/7 hot water geyser in an earthy aesthetic." src="images/bathroom.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">
+              The Rooms • En-suite
+            </span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10">
+<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Slate &amp; Teak Bath Suite</h3>
+<p class="text-xs text-[#B8B0A8] mt-1">Natural grey slate stone, brass fittings, and uninterrupted hot water.</p>
+</div>
+</div>
+</div>
+<!-- ================= GROUP D: NEARBY ATTRACTIONS (CARD 11) ================= -->
+<!-- Card 11: Kumta Beach Gentle Waves -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="surroundings">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Kumta Beach in Karnataka at dusk, showing gentle Arabian sea waves washing across untouched fine golden sands. A soft warm dusk glow paints the horizon in shades of terracotta, blush, and dusky indigo, evoking quiet introspection and serene tropical stillness." src="images/riverpath.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">
+              Surroundings • Coastline
+            </span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10">
+<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Kumta Pristine Beach</h3>
+<p class="text-xs text-[#B8B0A8] mt-1">Untouched sands and gentle evening waves just minutes from the property.</p>
+</div>
+</div>
+</div>
+<!-- ================= GROUP D: NEARBY ATTRACTIONS (CARD 12) ================= -->
+<!-- Card 12: Scenic Cliffside Coastal Trail Path -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="surroundings">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A scenic coastal walking trail path along high cliff bluffs overlooking the Arabian Sea near Kumta, Karnataka. Golden wild grasses sway in the sea breeze along the red laterite stone walking trail with sweeping views of the open ocean coastline under warm evening skies." src="images/seapath.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">
+              Surroundings • Trail
+            </span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10">
+<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Cliffside Coastal Trail</h3>
+<p class="text-xs text-[#B8B0A8] mt-1">Dramatic ridge trail connecting secluded coves and secret beaches.</p>
+</div>
+</div>
+</div>
+<!-- ================= GROUP D: NEARBY ATTRACTIONS (CARD 13) ================= -->
+<!-- Card 13: Local Wooden Fishing Boats on Estuary -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="surroundings">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional wooden Indian fishing boats gently moored along the calm mirrored waters of the Aghanashini river estuary in Kumta. Dense mangrove foliage and lush coconut palms line the background in soft early morning mist, reflecting peaceful rural coastal heritage." src="images/backwater.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">
+              Surroundings • Estuary
+            </span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10">
+<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Artisanal Wooden Boats</h3>
+<p class="text-xs text-[#B8B0A8] mt-1">Fishermen's timber canoes moored quietly on the riverbank.</p>
+</div>
+</div>
+</div>
+<!-- ================= GROUP A: THE SETTING (CARD 4) ================= -->
+<!-- Card 4: Lush Tropical Vegetation & River Backdrop -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="views">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Thick verdant tropical vegetation with broad banana leaves, ferns, and wild coastal palms framing the tranquil waters of the Aghanashini river. The setting has soft ambient lighting highlighting lush deep emerald foliage and calm water reflections in Kumta, Karnataka." src="images/waterfront.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">
+              The Setting • Greens
+            </span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10">
+<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Tropical Backwater Flora</h3>
+<p class="text-xs text-[#B8B0A8] mt-1">Dense riverside greenery where river breezes meet palm fronds.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- ========================================================================= -->
+<!-- 5. VIDEO / VIRTUAL TOUR TEASER CARD                                       -->
+<!-- ========================================================================= -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 pb-20">
+<div class="relative rounded-2xl overflow-hidden bg-[#151A22] border border-[#2A3040] p-8 md:p-12 shadow-2xl">
+<!-- Ambient Glow Behind Card -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-[#C4613A]/15 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+<div class="lg:col-span-7">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1C2330] border border-[#2A3040] text-[#E8956D] text-xs font-medium mb-4">
+<span class="material-symbols-outlined text-sm text-[#C4613A]">videocam</span>
+<span>Immersive Experience</span>
+</div>
+<h2 class="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#F5F0EA] mb-4">
+            Virtual 360° Walkthrough — Coming Soon
+          </h2>
+<p class="text-base text-[#B8B0A8] leading-relaxed max-w-xl">
+            Step through our heritage wooden doorways from anywhere in the world. Soon you will be able to experience the ambient sounds of singing coastal birds, whispering palm fronds, and the gentle lapping of Aghanashini river waters.
+          </p>
+<div class="mt-6 flex flex-wrap gap-4 text-xs sm:text-sm text-[#7A7268]">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-[#C4613A]">check_circle</span> 360° Spatial Audio</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-[#C4613A]">check_circle</span> Room-to-River Flow</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-[#C4613A]">check_circle</span> Sunset Timing Simulations</span>
+</div>
+</div>
+<div class="lg:col-span-5 flex justify-center lg:justify-end">
+<div class="relative w-full max-w-md aspect-[16/10] rounded-xl overflow-hidden border border-[#2A3040] bg-[#1C2330] flex items-center justify-center group cursor-pointer shadow-inner">
+<!-- Subtle preview placeholder styled as backwater dusk view -->
+<div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:scale-105 transition-transform duration-500" data-alt="A peaceful panoramic view of the Kumta Karnataka backwaters at dusk with deep orange sunset skies and warm lantern reflections on the wooden deck of Seaside Guest House." style="background-image: url('images/waterfront.jpeg')"></div>
+<div class="absolute inset-0 bg-[#0F1218]/60"></div>
+<!-- Terracotta Play Button -->
+<div class="relative z-10 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#C4613A] group-hover:bg-[#D4724A] text-[#F5F0EA] flex items-center justify-center shadow-xl shadow-[#C4613A]/40 transition-all duration-300 group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl sm:text-4xl pl-1" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<span class="absolute bottom-3 text-xs tracking-wider uppercase text-[#E8956D] font-medium z-10 bg-black/60 px-3 py-1 rounded-full backdrop-blur-sm">
+              Preview Teaser
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 6. CALL TO ACTION (CTA)                                                   -->
+<!-- ========================================================================= -->
+<section class="relative py-20 overflow-hidden bg-gradient-to-r from-[#9E4928] via-[#C4613A] to-[#B0532F] text-white" id="booking-cta">
+<!-- Overlay Pattern Accents -->
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_50%)] pointer-events-none"></div>
+<div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+<span class="inline-block uppercase tracking-widest text-xs font-bold text-amber-200 mb-3 bg-black/20 px-3 py-1 rounded-full">Direct Reservation</span>
+<h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 text-[#F5F0EA]">
+        Loved What You Saw?
+      </h2>
+<p class="max-w-2xl mx-auto text-base sm:text-lg text-stone-100 font-light leading-relaxed mb-8">
+        Reserve directly with us for instant confirmation, personalized local recommendations, and best available pricing for your stay in Kumta.
+      </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<!-- WhatsApp Primary CTA -->
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-[#0F1218] font-bold text-base shadow-xl transition-all duration-200 active:scale-95" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span>Book via WhatsApp</span>
+</a>
+<!-- Secondary CTA: Airbnb / Direct Contact -->
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#0F1218]/40 hover:bg-[#0F1218]/60 text-[#F5F0EA] border border-white/30 font-semibold text-base backdrop-blur-sm transition-all duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined text-lg">call</span>
+<span>Contact Host</span>
+</a>
+<!-- Airbnb Listing Badge -->
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-[#F5F0EA] border border-white/20 font-medium text-sm backdrop-blur-sm transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-base">travel_explore</span>
+<span>View on Airbnb</span>
+</a>
+</div>
+<!-- Quick Trust Indicators -->
+<div class="mt-10 pt-6 border-t border-white/20 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-stone-200">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm">verified_user</span> No Hidden Booking Fees</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm">schedule</span> Flexible Check-in</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm">restaurant</span> Authentic Coastal Breakfast Included</span>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 7. COMPREHENSIVE FOOTER (Footer Component Anchor)                         -->
+<!-- ========================================================================= -->
+<footer class="bg-neutral-950 dark:bg-neutral-950 docked full-width bottom border-t border-neutral-800 text-[#B8B0A8]">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col gap-10 w-full">
+<!-- Top Grid: Brand, Tagline, Address, Links -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+<!-- Brand Column -->
+<div class="lg:col-span-4 flex flex-col gap-4">
+<span class="font-serif italic text-xl font-bold text-stone-100 dark:text-stone-100 flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600 text-xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+<span>Seaside Guest House</span>
+</span>
+<p class="font-serif italic text-stone-400 text-base">Where the River Meets the Sea</p>
+<p class="text-sm text-stone-400 leading-relaxed max-w-sm">
+            A traditional coastal boutique guest house located in Kumta, Karnataka. Immersed between serene coconut groves and the tranquil waters of the Arabian Sea and Aghanashini river.
+          </p>
+<div class="flex items-center gap-3 pt-2">
+<a class="w-9 h-9 rounded-full bg-[#1C2330] hover:bg-[#25D366]/20 text-[#25D366] flex items-center justify-center border border-[#2A3040] transition-colors" href="https://wa.me/919876543210" title="WhatsApp">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+<a class="w-9 h-9 rounded-full bg-[#1C2330] hover:bg-[#C4613A]/20 text-[#E8956D] flex items-center justify-center border border-[#2A3040] transition-colors" href="#" title="Instagram">
+<span class="material-symbols-outlined text-lg">photo_camera</span>
+</a>
+<a class="w-9 h-9 rounded-full bg-[#1C2330] hover:bg-[#C4613A]/20 text-[#E8956D] flex items-center justify-center border border-[#2A3040] transition-colors" href="#" title="Location Map">
+<span class="material-symbols-outlined text-lg">pin_drop</span>
+</a>
+</div>
+</div>
+<!-- Links Column 1: Explore -->
+<div class="lg:col-span-3 flex flex-col gap-3">
+<h4 class="text-xs uppercase tracking-widest font-semibold text-stone-200">Explore &amp; Discover</h4>
+<ul class="flex flex-col gap-2.5 text-sm">
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">About Kumta</a></li>
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Rooms &amp; Suites</a></li>
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Experiences</a></li>
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Local Cuisine</a></li>
+</ul>
+</div>
+<!-- Links Column 2: Guest Information -->
+<div class="lg:col-span-2 flex flex-col gap-3">
+<h4 class="text-xs uppercase tracking-widest font-semibold text-stone-200">Information</h4>
+<ul class="flex flex-col gap-2.5 text-sm">
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">House Rules</a></li>
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Contact &amp; Directions</a></li>
+</ul>
+</div>
+<!-- Contact Column -->
+<div class="lg:col-span-3 flex flex-col gap-3">
+<h4 class="text-xs uppercase tracking-widest font-semibold text-stone-200">Location &amp; Contact</h4>
+<div class="text-sm text-stone-400 flex flex-col gap-2.5">
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[#C4613A] text-lg shrink-0 mt-0.5">location_on</span>
+<span>Aghanashini Estuary Road, Kumta Taluk, Uttara Kannada District, Karnataka 581343, India</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#C4613A] text-lg shrink-0">mail</span>
+<span>stay@seasideguesthousekumta.com</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#C4613A] text-lg shrink-0">call</span>
+<span>+91 98800 12345 / +91 8386 220000</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Bottom Row / Copyright Text -->
+<div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+<p>© 2024 Seaside Guest House, Kumta, Karnataka. All rights reserved. Where the River Meets the Sea.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-stone-200 transition-colors" href="#">Terms of Stay</a>
+<a class="hover:text-stone-200 transition-colors" href="#">Cancellation Policy</a>
+<a class="hover:text-stone-200 transition-colors" href="#">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- ========================================================================= -->
+<!-- LIGHTWEIGHT VANILLA JS FOR FILTERING & MOBILE MENU INTERACTIONS           -->
+<!-- ========================================================================= -->
+<script>
+    // Mobile navigation toggle
+    const toggleBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    if (toggleBtn && mobileMenu) {
+      toggleBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        if (menuIcon) {
+          menuIcon.textContent = isHidden ? 'menu' : 'close';
+        }
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          if (menuIcon) menuIcon.textContent = 'menu';
+        });
+      });
+    }
+
+    // Scroll Reveal Observer
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { root: null, threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Navbar Scroll Elevation
+    const header = document.querySelector('header');
+    if (header) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }, { passive: true });
+    }
+
+    // Gallery Category Filtering Logic
+    function filterGallery(category, buttonElement) {
+      // 1. Update filter tab button styles
+      const tabs = document.querySelectorAll('.gallery-tab');
+      tabs.forEach(tab => {
+        tab.classList.remove('active', 'bg-[#C4613A]', 'text-[#F5F0EA]', 'shadow-md', 'shadow-[#C4613A]/20');
+        tab.classList.add('bg-[#1C2330]', 'text-[#B8B0A8]', 'border', 'border-[#2A3040]');
+      });
+
+      if (buttonElement) {
+        buttonElement.classList.add('active', 'bg-[#C4613A]', 'text-[#F5F0EA]', 'shadow-md', 'shadow-[#C4613A]/20');
+        buttonElement.classList.remove('bg-[#1C2330]', 'text-[#B8B0A8]', 'border', 'border-[#2A3040]');
+      }
+
+      // 2. Filter the cards in the grid
+      const cards = document.querySelectorAll('.gallery-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const itemCategory = card.getAttribute('data-category');
+        if (category === 'all' || itemCategory === category) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // 3. Update category title display
+      const titleElement = document.getElementById('current-category-title');
+      if (titleElement) {
+        switch (category) {
+          case 'exteriors':
+            titleElement.textContent = 'Guest House Exteriors';
+            break;
+          case 'rooms':
+            titleElement.textContent = 'Room & Suite Interiors';
+            break;
+          case 'views':
+            titleElement.textContent = 'Backwaters & Coastal Views';
+            break;
+          case 'surroundings':
+            titleElement.textContent = 'Nearby Kumta Attractions';
+            break;
+          default:
+            titleElement.textContent = 'Curated Collection';
+        }
+      }
+    }
+  </script>
+</body></html>

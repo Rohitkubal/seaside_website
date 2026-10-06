@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rooms &amp; Suites | Seaside Guest House - Kumta, Karnataka</title>
+<!-- Fonts: Playfair Display & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0F1218',
+              surface: '#151A22',
+              card: '#1C2330',
+              terracotta: '#C4613A',
+              'terracotta-hover': '#D4724A',
+              accent: '#E8956D',
+              cream: '#F5F0EA',
+              secondary: '#B8B0A8',
+              muted: '#7A7268',
+              whatsapp: '#25D366',
+              divider: '#2A3040'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['Inter', 'sans-serif'],
+            headline: ['"Playfair Display"', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .font-serif-italic {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    
+    /* Elegant Motion Suite */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+      50% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    }
+    
+    .animate-float-slow {
+      animation: floatSlow 6s ease-in-out infinite;
+    }
+    .animate-pulse-glow {
+      animation: pulseGlow 3s infinite;
+    }
+    
+    /* Scroll Reveal System */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .stagger-1 { transition-delay: 100ms; }
+    .stagger-2 { transition-delay: 200ms; }
+    .stagger-3 { transition-delay: 300ms; }
+    .stagger-4 { transition-delay: 400ms; }
+    
+    /* Navbar Scroll Elevation */
+    header.scrolled {
+      background: rgba(15, 18, 24, 0.96) !important;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7) !important;
+      border-color: rgba(42, 48, 64, 0.95) !important;
+    }
+  </style>
+</head>
+<body class="bg-[#0F1218] text-[#F5F0EA] font-body selection:bg-[#C4613A]/30 selection:text-white antialiased min-h-screen flex flex-col">
+<!-- TOP APP BAR -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-[#0F1218]/90 backdrop-blur-md border-b border-[#2A3040]/80 shadow-lg shadow-black/20 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between h-20 w-full">
+    <!-- Brand Logo -->
+    <a class="flex items-center gap-2.5 group cursor-pointer flex-shrink-0" href="index.html">
+      <span class="material-symbols-outlined text-amber-500 text-2xl sm:text-3xl group-hover:rotate-12 transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">sailing</span>
+      <span class="font-serif italic text-xl sm:text-2xl font-bold tracking-tight text-amber-500 group-hover:text-amber-400 transition-colors whitespace-nowrap">
+        Seaside Guest House
+      </span>
+    </a>
+    
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium tracking-wide">
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="index.html">
+        Home
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="index.html#about">
+        About
+      </a>
+      <a class="text-amber-500 font-semibold border-b-2 border-amber-500 pb-1" href="rooms.html">
+        Rooms
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="index.html#amenities">
+        Amenities
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="gallery.html">
+        Gallery
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="location.html">
+        Location
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="contact.html">
+        Contact
+      </a>
+    </nav>
+
+    <!-- Trailing Action Buttons -->
+    <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+      <!-- Secondary: Chat on WhatsApp -->
+      <a class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-semibold bg-[#25D366]/15 hover:bg-[#25D366] text-[#25D366] hover:text-white border border-[#25D366]/30 transition-all duration-200 active:scale-95 shadow-sm animate-pulse-glow" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined text-base">chat</span>
+        <span>Chat on WhatsApp</span>
+      </a>
+      <!-- Primary: Book Now -->
+      <a class="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium uppercase tracking-wider bg-[#C4613A] hover:bg-[#D4724A] text-white shadow-md shadow-[#C4613A]/25 transition-all duration-200 active:scale-95" href="contact.html#reservation-form">
+        <span>Book Now</span>
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
+      <!-- Mobile Hamburger Toggle -->
+      <button aria-label="Toggle navigation" class="lg:hidden text-stone-200 hover:text-amber-500 focus:outline-none p-1.5 transition-colors" id="mobile-menu-btn">
+        <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="hidden lg:hidden bg-[#0F1218]/98 backdrop-blur-xl border-b border-neutral-800 px-6 py-6 space-y-4 shadow-2xl transition-all duration-300" id="mobile-menu">
+    <div class="flex flex-col space-y-3 font-medium">
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="index.html">Home</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="index.html#about">About</a>
+      <a class="text-amber-500 font-semibold py-1 border-l-2 border-amber-500 pl-3" href="rooms.html">Rooms</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="index.html#amenities">Amenities</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="gallery.html">Gallery</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="location.html">Location</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="contact.html">Contact</a>
+    </div>
+    <div class="pt-4 border-t border-[#2A3040] flex flex-col gap-3">
+      <a class="inline-flex items-center justify-center gap-2 py-2.5 rounded-full text-sm font-semibold bg-[#25D366] text-white" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined text-base">chat</span>
+        Chat on WhatsApp
+      </a>
+      <a class="inline-flex items-center justify-center py-2.5 rounded-full text-sm font-medium bg-[#C4613A] text-white" href="contact.html#reservation-form">
+        Book Now
+      </a>
+    </div>
+  </div>
+</header>
+<!-- MAIN CONTENT CONTAINER -->
+<main class="flex-grow pt-28">
+<!-- PAGE HERO -->
+<section class="relative py-16 md:py-24 border-b border-[#2A3040] overflow-hidden">
+<!-- Atmospheric Ambient Glow -->
+<div class="absolute inset-0 pointer-events-none opacity-25">
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-[#C4613A]/20 rounded-full blur-3xl"></div>
+<div class="absolute top-20 right-0 w-[30rem] h-[30rem] bg-amber-900/15 rounded-full blur-[100px]"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
+<!-- Location Pill -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C2330] border border-[#2A3040] text-amber-500 text-xs font-medium tracking-widest uppercase mb-6">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span>Kumta, Karnataka, India</span>
+</div>
+<h1 class="text-4xl md:text-6xl font-serif font-bold text-stone-100 tracking-tight mb-4">
+          Our Rooms
+        </h1>
+<p class="max-w-2xl mx-auto text-base md:text-lg text-[#B8B0A8] font-light leading-relaxed font-body">
+          Comfort meets coastal charm in Kumta, Karnataka — authentic heritage living where the river meets the sea.
+        </p>
+<!-- Aesthetic Key Metrics / Badges -->
+<div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-[#7A7268] tracking-wide">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600 text-sm">cottage</span>
+<span class="text-[#B8B0A8]">Heritage Coastal Architecture</span>
+</div>
+<span class="hidden sm:inline text-neutral-700">•</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600 text-sm">water_drop</span>
+<span class="text-[#B8B0A8]">Aghanashini Backwaters</span>
+</div>
+<span class="hidden sm:inline text-neutral-700">•</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600 text-sm">verified</span>
+<span class="text-[#B8B0A8]">Warm Konkan Hospitality</span>
+</div>
+</div>
+</div>
+</section>
+<!-- DETAILED ROOM SHOWCASE -->
+<section class="py-16 md:py-24 max-w-7xl mx-auto px-6 md:px-12 space-y-20" id="rooms-section">
+<!-- ROOM 1: THE RIVER ROOM -->
+<div class="bg-[#151A22] border border-[#2A3040] hover:border-[#C4613A]/50 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<!-- Image Section -->
+<div class="lg:col-span-7 relative min-h-[380px] lg:min-h-full overflow-hidden group">
+<img alt="The River Room at Seaside Guest House Kumta" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" src="images/bedroom-window.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#151A22] via-transparent to-black/30 lg:bg-gradient-to-r lg:from-transparent lg:to-[#151A22]/90"></div>
+<!-- Badges Floating Over Image -->
+<div class="absolute top-5 left-5 flex flex-wrap gap-2 z-10">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-950/80 backdrop-blur-md text-cyan-400 border border-cyan-800/40 text-xs font-medium tracking-wide">
+<span class="material-symbols-outlined text-sm">waves</span>
+                River &amp; Backwater View
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#C4613A]/90 text-stone-100 text-xs font-semibold uppercase tracking-wider">
+                Popular
+              </span>
+</div>
+</div>
+<!-- Room Content Section -->
+<div class="lg:col-span-5 p-8 md:p-10 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-4 mb-2">
+<span class="text-xs font-semibold uppercase tracking-widest text-[#C4613A]">Suite 01</span>
+<span class="text-xs text-[#7A7268]">Max 2 Guests</span>
+</div>
+<h2 class="text-3xl font-serif font-bold text-[#F5F0EA] mb-4">
+                The River Room
+              </h2>
+<p class="text-sm md:text-base text-[#B8B0A8] font-light leading-relaxed mb-6 font-body">
+                Peaceful room with direct backwater views. Wake up to the gentle sound of water and birds, with lush coconut palms framing your window. Features a comfortable double bed, private attached bathroom with hot water geyser, fan, and a charming traditional interior.
+              </p>
+<!-- Amenities Chips Grid -->
+<div class="mb-8">
+<h4 class="text-xs uppercase font-medium tracking-wider text-[#7A7268] mb-3">Room Highlights</h4>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1C2330] border border-[#2A3040] text-xs text-[#F5F0EA]">
+<span>🛏️</span> Double Bed
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1C2330] border border-[#2A3040] text-xs text-[#F5F0EA]">
+<span>🚿</span> Private Bathroom
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1C2330] border border-[#2A3040] text-xs text-[#F5F0EA]">
+<span>🔥</span> Hot Water
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1C2330] border border-[#2A3040] text-xs text-[#F5F0EA]">
+<span>📶</span> High-Speed WiFi
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1C2330] border border-[#2A3040] text-xs text-[#F5F0EA]">
+<span>🌊</span> River View
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1C2330] border border-[#2A3040] text-xs text-[#F5F0EA]">
+<span>🌀</span> Ceiling Fan
+                  </span>
+</div>
+</div>
+</div>
+<!-- Price & Booking Block -->
+<div class="pt-6 border-t border-[#2A3040]/80">
+<div class="flex items-baseline justify-between mb-2">
+<div>
+<span class="text-3xl font-serif font-bold text-[#F5F0EA]">₹2,500</span>
+<span class="text-xs text-[#7A7268] font-normal"> / night</span>
+</div>
+<span class="text-[11px] text-amber-500/90 font-medium">Direct Booking Perk</span>
+</div>
+<p class="text-[11px] text-[#7A7268] mb-5">Rates may vary by season • Check Airbnb for live availability</p>
+<!-- Actions -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<a class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-black font-semibold text-xs tracking-wide shadow-md transition-all duration-200 active:scale-95" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span>Book via WhatsApp</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#1C2330] hover:bg-[#222a3a] text-stone-200 border border-[#2A3040] hover:border-[#C4613A]/60 font-medium text-xs tracking-wide transition-all duration-200 active:scale-95" href="https://www.airbnb.co.in/rooms/1754501200326210708" rel="noopener noreferrer" target="_blank">
+<span>View on Airbnb</span>
+<span class="material-symbols-outlined text-xs">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ROOM 2: THE GARDEN ROOM -->
+<div class="bg-[#151A22] border border-[#2A3040] hover:border-[#C4613A]/50 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<!-- Image Section (reversed on desktop layout for asymmetric rhythm) -->
+<div class="lg:col-span-7 lg:order-2 relative min-h-[380px] lg:min-h-full overflow-hidden group">
+<img alt="The Garden Room at Seaside Guest House Kumta" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" src="images/balcony.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#151A22] via-transparent to-black/30 lg:bg-gradient-to-l lg:from-transparent lg:to-[#151A22]/90"></div>
+<!-- Badges Floating Over Image -->
+<div class="absolute top-5 right-5 flex flex-wrap gap-2 z-10">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-950/80 backdrop-blur-md text-emerald-400 border border-emerald-800/40 text-xs font-medium tracking-wide">
+<span class="material-symbols-outlined text-sm">potted_plant</span>
+                Garden &amp; Nature View
+              </span>
+</div>
+</div>
+<!-- Room Content Section -->
+<div class="lg:col-span-5 lg:order-1 p-8 md:p-10 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-4 mb-2">
+<span class="text-xs font-semibold uppercase tracking-widest text-[#C4613A]">Suite 02</span>
+<span class="text-xs text-[#7A7268]">Max 2 Guests</span>
+</div>
+<h2 class="text-3xl font-serif font-bold text-[#F5F0EA] mb-4">
+                The Garden Room
+              </h2>
+<p class="text-sm md:text-base text-[#B8B0A8] font-light leading-relaxed mb-6 font-body">
+                A serene retreat surrounded by lush tropical gardens of coconut palms, banana trees, and coastal flora. Features a comfortable double bed, private attached bathroom, hot water geyser, and a tranquil outdoor balcony area perfect for morning tea with nature sounds.
+              </p>
+<!-- Amenities Chips Grid -->
+<div class="mb-8">
+<h4 class="text-xs uppercase font-medium tracking-wider text-[#7A7268] mb-3">Room Highlights</h4>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1C2330] border border-[#2A3040] text-xs text-[#F5F0EA]">
+<span>🛏️</span> Double Bed
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1C2330] border border-[#2A3040] text-xs text-[#F5F0EA]">
+<span>🚿</span> Private Bathroom
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1C2330] border border-[#2A3040] text-xs text-[#F5F0EA]">
+<span>🔥</span> Hot Water
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1C2330] border border-[#2A3040] text-xs text-[#F5F0EA]">
+<span>📶</span> High-Speed WiFi
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1C2330] border border-[#2A3040] text-xs text-[#F5F0EA]">
+<span>🌴</span> Garden View
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1C2330] border border-[#2A3040] text-xs text-[#F5F0EA]">
+<span>🌀</span> Ceiling Fan
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1C2330] border border-[#2A3040] text-xs text-[#F5F0EA]">
+<span>🏡</span> Balcony Access
+                  </span>
+</div>
+</div>
+</div>
+<!-- Price & Booking Block -->
+<div class="pt-6 border-t border-[#2A3040]/80">
+<div class="flex items-baseline justify-between mb-2">
+<div>
+<span class="text-3xl font-serif font-bold text-[#F5F0EA]">₹2,200</span>
+<span class="text-xs text-[#7A7268] font-normal"> / night</span>
+</div>
+<span class="text-[11px] text-emerald-400 font-medium">Best Rate Guarantee</span>
+</div>
+<p class="text-[11px] text-[#7A7268] mb-5">Best rate guarantee when booking direct via WhatsApp</p>
+<!-- Actions -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<a class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-black font-semibold text-xs tracking-wide shadow-md transition-all duration-200 active:scale-95" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span>Book via WhatsApp</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#1C2330] hover:bg-[#222a3a] text-stone-200 border border-[#2A3040] hover:border-[#C4613A]/60 font-medium text-xs tracking-wide transition-all duration-200 active:scale-95" href="https://www.airbnb.co.in/rooms/1754501200326210708" rel="noopener noreferrer" target="_blank">
+<span>View on Airbnb</span>
+<span class="material-symbols-outlined text-xs">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- COMMON AMENITIES SECTION -->
+<section class="py-20 bg-[#151A22]/60 border-y border-[#2A3040] relative">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-semibold uppercase tracking-widest text-[#C4613A]">Hospitality Standards</span>
+<h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-100 mt-2 mb-3">
+            Included With Every Stay
+          </h2>
+<p class="text-sm md:text-base text-[#B8B0A8] font-light">
+            Thoughtfully curated amenities for a comfortable, authentic coastal getaway
+          </p>
+</div>
+<!-- 6-Card Grid with Glass-like Dark Cards & Terracotta Accents -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="p-6 rounded-2xl bg-[#1C2330]/80 border border-[#2A3040] hover:border-[#C4613A]/40 transition-all duration-300 group">
+<div class="w-12 h-12 rounded-xl bg-[#C4613A]/10 border border-[#C4613A]/25 flex items-center justify-center text-[#C4613A] group-hover:scale-110 transition-transform duration-300 mb-4">
+<span class="material-symbols-outlined text-2xl">wifi</span>
+</div>
+<h3 class="text-lg font-serif font-bold text-[#F5F0EA] mb-2">High-Speed WiFi</h3>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">
+              Reliable fiber work &amp; streaming connectivity so you stay effortlessly connected with the outside world.
+            </p>
+</div>
+<!-- Card 2 -->
+<div class="p-6 rounded-2xl bg-[#1C2330]/80 border border-[#2A3040] hover:border-[#C4613A]/40 transition-all duration-300 group">
+<div class="w-12 h-12 rounded-xl bg-[#C4613A]/10 border border-[#C4613A]/25 flex items-center justify-center text-[#C4613A] group-hover:scale-110 transition-transform duration-300 mb-4">
+<span class="material-symbols-outlined text-2xl">local_parking</span>
+</div>
+<h3 class="text-lg font-serif font-bold text-[#F5F0EA] mb-2">Dedicated Parking</h3>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">
+              Safe, enclosed on-site vehicle and motorcycle parking on property premises at zero extra cost.
+            </p>
+</div>
+<!-- Card 3 -->
+<div class="p-6 rounded-2xl bg-[#1C2330]/80 border border-[#2A3040] hover:border-[#C4613A]/40 transition-all duration-300 group">
+<div class="w-12 h-12 rounded-xl bg-[#C4613A]/10 border border-[#C4613A]/25 flex items-center justify-center text-[#C4613A] group-hover:scale-110 transition-transform duration-300 mb-4">
+<span class="material-symbols-outlined text-2xl">water_heater</span>
+</div>
+<h3 class="text-lg font-serif font-bold text-[#F5F0EA] mb-2">24/7 Hot Water</h3>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">
+              Dedicated high-efficiency geysers fitted in every attached bath for rejuvenating post-beach showers.
+            </p>
+</div>
+<!-- Card 4 -->
+<div class="p-6 rounded-2xl bg-[#1C2330]/80 border border-[#2A3040] hover:border-[#C4613A]/40 transition-all duration-300 group">
+<div class="w-12 h-12 rounded-xl bg-[#C4613A]/10 border border-[#C4613A]/25 flex items-center justify-center text-[#C4613A] group-hover:scale-110 transition-transform duration-300 mb-4">
+<span class="material-symbols-outlined text-2xl">landscape</span>
+</div>
+<h3 class="text-lg font-serif font-bold text-[#F5F0EA] mb-2">Pristine Coastal Views</h3>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">
+              Refreshing backwater breezes, lush coconut canopy vistas, and serene sunset horizons all around.
+            </p>
+</div>
+<!-- Card 5 -->
+<div class="p-6 rounded-2xl bg-[#1C2330]/80 border border-[#2A3040] hover:border-[#C4613A]/40 transition-all duration-300 group">
+<div class="w-12 h-12 rounded-xl bg-[#C4613A]/10 border border-[#C4613A]/25 flex items-center justify-center text-[#C4613A] group-hover:scale-110 transition-transform duration-300 mb-4">
+<span class="material-symbols-outlined text-2xl">shower</span>
+</div>
+<h3 class="text-lg font-serif font-bold text-[#F5F0EA] mb-2">Private Attached Bathrooms</h3>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">
+              Spotless en-suite washrooms cleaned daily, equipped with clean cotton towels and organic essentials.
+            </p>
+</div>
+<!-- Card 6 -->
+<div class="p-6 rounded-2xl bg-[#1C2330]/80 border border-[#2A3040] hover:border-[#C4613A]/40 transition-all duration-300 group">
+<div class="w-12 h-12 rounded-xl bg-[#C4613A]/10 border border-[#C4613A]/25 flex items-center justify-center text-[#C4613A] group-hover:scale-110 transition-transform duration-300 mb-4">
+<span class="material-symbols-outlined text-2xl">mode_fan</span>
+</div>
+<h3 class="text-lg font-serif font-bold text-[#F5F0EA] mb-2">Cool Coastal Ventilation</h3>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">
+              High-efficiency ceiling fans coupled with natural cross-ventilation windows designed for tropical breeze.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- HOUSE RULES SECTION -->
+<section class="py-16 md:py-24 max-w-7xl mx-auto px-6 md:px-12">
+<div class="bg-[#151A22] border-2 border-[#C4613A]/40 rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden">
+<!-- Subtle decorative icon background -->
+<div class="absolute -right-8 -bottom-8 opacity-5 text-stone-100 pointer-events-none">
+<span class="material-symbols-outlined text-[200px]">gite</span>
+</div>
+<div class="max-w-3xl">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-[#C4613A]">rule</span>
+<span class="text-xs uppercase font-semibold tracking-widest text-[#C4613A]">Guest Courtesy</span>
+</div>
+<h2 class="text-2xl md:text-3xl font-serif font-bold text-stone-100 mb-2">
+            Guest House Rules &amp; Policies
+          </h2>
+<p class="text-sm text-[#B8B0A8] mb-8 font-light">
+            We operate as a calm residential sanctuary. Kindly review our simple guidelines to keep our environment harmonious.
+          </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-start gap-3.5 p-4 rounded-xl bg-[#1C2330]/70 border border-[#2A3040]">
+<span class="material-symbols-outlined text-amber-500 mt-0.5 text-xl">login</span>
+<div>
+<h4 class="text-sm font-semibold text-[#F5F0EA]">Check-in</h4>
+<p class="text-xs text-[#B8B0A8] mt-0.5">11:00 AM onwards (Early check-in upon request)</p>
+</div>
+</div>
+<div class="flex items-start gap-3.5 p-4 rounded-xl bg-[#1C2330]/70 border border-[#2A3040]">
+<span class="material-symbols-outlined text-amber-500 mt-0.5 text-xl">logout</span>
+<div>
+<h4 class="text-sm font-semibold text-[#F5F0EA]">Check-out</h4>
+<p class="text-xs text-[#B8B0A8] mt-0.5">10:00 AM (Late check-out subject to availability)</p>
+</div>
+</div>
+<div class="flex items-start gap-3.5 p-4 rounded-xl bg-[#1C2330]/70 border border-[#2A3040]">
+<span class="material-symbols-outlined text-amber-500 mt-0.5 text-xl">smoke_free</span>
+<div>
+<h4 class="text-sm font-semibold text-[#F5F0EA]">No Smoking Indoors</h4>
+<p class="text-xs text-[#B8B0A8] mt-0.5">Designated outdoor garden areas only</p>
+</div>
+</div>
+<div class="flex items-start gap-3.5 p-4 rounded-xl bg-[#1C2330]/70 border border-[#2A3040]">
+<span class="material-symbols-outlined text-amber-500 mt-0.5 text-xl">badge</span>
+<div>
+<h4 class="text-sm font-semibold text-[#F5F0EA]">Registered Guests Only</h4>
+<p class="text-xs text-[#B8B0A8] mt-0.5">No unregistered visitors in rooms after 10:00 PM</p>
+</div>
+</div>
+<div class="flex items-start gap-3.5 p-4 rounded-xl bg-[#1C2330]/70 border border-[#2A3040]">
+<span class="material-symbols-outlined text-amber-500 mt-0.5 text-xl">volume_off</span>
+<div>
+<h4 class="text-sm font-semibold text-[#F5F0EA]">Quiet Hours</h4>
+<p class="text-xs text-[#B8B0A8] mt-0.5">10:00 PM – 7:00 AM to preserve neighborhood tranquility</p>
+</div>
+</div>
+<div class="flex items-start gap-3.5 p-4 rounded-xl bg-[#1C2330]/70 border border-[#2A3040]">
+<span class="material-symbols-outlined text-amber-500 mt-0.5 text-xl">eco</span>
+<div>
+<h4 class="text-sm font-semibold text-[#F5F0EA]">Eco-Friendly Living</h4>
+<p class="text-xs text-[#B8B0A8] mt-0.5">Please turn off geysers and fans when stepping out</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BOOKING CTA BANNER -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 mb-20">
+<div class="relative rounded-3xl bg-gradient-to-r from-[#C4613A] to-[#a34d2b] p-10 md:p-16 overflow-hidden shadow-2xl">
+<!-- Stylized Wave Graphic Texture Overlay -->
+<div class="absolute inset-0 opacity-15 pointer-events-none mix-blend-overlay">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 1000 300">
+<path d="M0,160 C320,300 420,0 1000,160 L1000,300 L0,300 Z" fill="#ffffff"></path>
+</svg>
+</div>
+<div class="relative z-10 max-w-3xl">
+<span class="text-xs uppercase tracking-widest text-amber-100 font-semibold mb-3 inline-block">Direct Reservation</span>
+<h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-4 leading-tight">
+            Ready to Book Your Kumta Retreat?
+          </h2>
+<p class="text-stone-100 text-sm md:text-base font-light mb-8 max-w-xl">
+            Reserve directly with us for instant confirmation, personalized local recommendations, and best available pricing.
+          </p>
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-black font-semibold text-sm shadow-xl transition-all duration-200 active:scale-95" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span>Book via WhatsApp</span>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/30 font-medium text-sm transition-all duration-200 active:scale-95" href="#">
+<span>Contact Host</span>
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="bg-neutral-950 dark:bg-neutral-950 docked full-width bottom border-t border-neutral-800 flat no shadows mt-auto">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col gap-10 w-full">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+<!-- Brand / Identity Column -->
+<div class="md:col-span-2 space-y-4">
+<a class="font-serif italic text-xl font-bold text-stone-100 dark:text-stone-100 inline-block" href="#">
+            Seaside Guest House
+          </a>
+<p class="text-sm font-serif italic text-[#C4613A]">
+            Where the River Meets the Sea.
+          </p>
+<p class="text-xs text-stone-400 dark:text-stone-400 leading-relaxed max-w-md">
+            A family-run coastal haven situated by the tranquil backwaters of Kumta. Unhurried living, wholesome local meals, and raw Arabian Sea beauty.
+          </p>
+<div class="pt-2 text-xs text-[#7A7268] space-y-1">
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-[#C4613A]">location_on</span>
+              Kumta, Uttara Kannada, Karnataka - 581343, India
+            </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-[#C4613A]">mail</span>
+              stay@seasideguesthousekumta.com
+            </p>
+</div>
+</div>
+<!-- Quick Links Column 1 -->
+<div>
+<h5 class="text-xs font-semibold uppercase tracking-widest text-[#F5F0EA] mb-4">Explore</h5>
+<ul class="space-y-2.5 text-xs">
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">About Kumta</a></li>
+<li><a class="text-stone-100 dark:text-stone-100 font-medium" href="#">Rooms &amp; Suites</a></li>
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Experiences</a></li>
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Local Cuisine</a></li>
+</ul>
+</div>
+<!-- Quick Links Column 2 -->
+<div>
+<h5 class="text-xs font-semibold uppercase tracking-widest text-[#F5F0EA] mb-4">Information</h5>
+<ul class="space-y-2.5 text-xs">
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">House Rules</a></li>
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Contact &amp; Directions</a></li>
+</ul>
+</div>
+</div>
+<!-- Footer Divider & Copyright -->
+<div class="pt-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 dark:text-stone-400 gap-4">
+<p>© 2024 Seaside Guest House, Kumta, Karnataka. All rights reserved. Where the River Meets the Sea.</p>
+<div class="flex items-center space-x-4 text-xs">
+<a class="hover:text-stone-100 transition-colors duration-150" href="#">Instagram</a>
+<span class="text-neutral-800">•</span>
+<a class="hover:text-stone-100 transition-colors duration-150" href="https://wa.me/919876543210">WhatsApp</a>
+<span class="text-neutral-800">•</span>
+<a class="hover:text-stone-100 transition-colors duration-150" href="https://www.airbnb.co.in/rooms/1754501200326210708">Airbnb</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Navbar Toggle & Motion Scripts -->
+<script>
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        if (menuIcon) {
+          menuIcon.textContent = isHidden ? 'menu' : 'close';
+        }
+      });
+
+      // Close menu on link click
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          if (menuIcon) menuIcon.textContent = 'menu';
+        });
+      });
+    }
+
+    // Scroll Reveal Observer
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { root: null, threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Navbar Scroll Elevation
+    const header = document.querySelector('header');
+    if (header) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }, { passive: true });
+    }
+</script>
+</body></html>

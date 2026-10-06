@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Seaside Guest House - Kumta, Karnataka</title>
+<!-- Google Fonts: Playfair Display & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: "#0F1218",
+              surface: "#151A22",
+              card: "#1C2330",
+              terracotta: "#C4613A",
+              "terracotta-hover": "#D4724A",
+              accent: "#E8956D",
+              cream: "#F5F0EA",
+              secondary: "#B8B0A8",
+              muted: "#7A7268",
+              whatsapp: "#25D366",
+              divider: "#2A3040"
+            }
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            serif: ["'Playfair Display'", "Georgia", "serif"],
+            body: ["'Inter'", "sans-serif"],
+            headline: ["'Playfair Display'", "Georgia", "serif"],
+            display: ["'Playfair Display'", "Georgia", "serif"],
+            label: ["'Inter'", "sans-serif"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-glow {
+      box-shadow: 0 0 50px -10px rgba(196, 97, 58, 0.15);
+    }
+    
+    /* Elegant Motion Suite */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+      50% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    }
+    
+    .animate-float-slow {
+      animation: floatSlow 6s ease-in-out infinite;
+    }
+    .animate-pulse-glow {
+      animation: pulseGlow 3s infinite;
+    }
+    
+    /* Scroll Reveal System */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .stagger-1 { transition-delay: 100ms; }
+    .stagger-2 { transition-delay: 200ms; }
+    .stagger-3 { transition-delay: 300ms; }
+    .stagger-4 { transition-delay: 400ms; }
+    
+    /* Navbar Scroll Elevation */
+    header.scrolled {
+      background: rgba(15, 18, 24, 0.96) !important;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7) !important;
+      border-color: rgba(42, 48, 64, 0.95) !important;
+    }
+  </style>
+</head>
+<body class="bg-[#0F1218] text-[#F5F0EA] font-body selection:bg-[#C4613A] selection:text-white antialiased min-h-screen flex flex-col justify-between">
+<!-- 1. FIXED NAVBAR (Shared Component Mapping) -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-[#0F1218]/90 backdrop-blur-md border-b border-[#2A3040]/80 shadow-lg shadow-black/20 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between h-20 w-full">
+    <!-- Brand Logo -->
+    <a class="flex items-center gap-2.5 group cursor-pointer flex-shrink-0" href="index.html">
+      <span class="material-symbols-outlined text-amber-500 text-2xl sm:text-3xl group-hover:rotate-12 transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">sailing</span>
+      <span class="font-serif italic text-xl sm:text-2xl font-bold tracking-tight text-amber-500 group-hover:text-amber-400 transition-colors whitespace-nowrap">
+        Seaside Guest House
+      </span>
+    </a>
+    
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium tracking-wide">
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="index.html">
+        Home
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="index.html#about">
+        About
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="rooms.html">
+        Rooms
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="index.html#amenities">
+        Amenities
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="gallery.html">
+        Gallery
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="location.html">
+        Location
+      </a>
+      <a class="text-amber-500 font-semibold border-b-2 border-amber-500 pb-1" href="contact.html">
+        Contact
+      </a>
+    </nav>
+
+    <!-- Trailing Action Buttons -->
+    <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+      <!-- Secondary: Chat on WhatsApp -->
+      <a class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-semibold bg-[#25D366]/15 hover:bg-[#25D366] text-[#25D366] hover:text-white border border-[#25D366]/30 transition-all duration-200 active:scale-95 shadow-sm animate-pulse-glow" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined text-base">chat</span>
+        <span>Chat on WhatsApp</span>
+      </a>
+      <!-- Primary: Book Now -->
+      <a class="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium uppercase tracking-wider bg-[#C4613A] hover:bg-[#D4724A] text-white shadow-md shadow-[#C4613A]/25 transition-all duration-200 active:scale-95" href="#reservation-form">
+        <span>Book Now</span>
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
+      <!-- Mobile Hamburger Toggle -->
+      <button aria-label="Toggle navigation" class="lg:hidden text-stone-200 hover:text-amber-500 focus:outline-none p-1.5 transition-colors" id="mobile-menu-btn">
+        <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="hidden lg:hidden bg-[#0F1218]/98 backdrop-blur-xl border-b border-neutral-800 px-6 py-6 space-y-4 shadow-2xl transition-all duration-300" id="mobile-menu">
+    <div class="flex flex-col space-y-3 font-medium">
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="index.html">Home</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="index.html#about">About</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="rooms.html">Rooms</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="index.html#amenities">Amenities</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="gallery.html">Gallery</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="location.html">Location</a>
+      <a class="text-amber-500 font-semibold py-1 border-l-2 border-amber-500 pl-3" href="contact.html">Contact</a>
+    </div>
+    <div class="pt-4 border-t border-[#2A3040] flex flex-col gap-3">
+      <a class="inline-flex items-center justify-center gap-2 py-2.5 rounded-full text-sm font-semibold bg-[#25D366] text-white" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined text-base">chat</span>
+        Chat on WhatsApp
+      </a>
+      <a class="inline-flex items-center justify-center py-2.5 rounded-full text-sm font-medium bg-[#C4613A] text-white" href="#reservation-form">
+        Book Now
+      </a>
+    </div>
+  </div>
+</header>
+<!-- MAIN CANVAS CONTENT -->
+<main class="flex-grow pt-28 pb-16">
+<!-- 2. PAGE HERO -->
+<section class="relative pt-12 pb-16 overflow-hidden">
+<!-- Ambient Glow Behind Hero -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#C4613A]/10 blur-[130px] rounded-full pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+<!-- Breadcrumb Badge -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C2330] border border-[#2A3040] text-xs font-semibold uppercase tracking-widest text-[#E8956D] mb-6">
+<span class="material-symbols-outlined text-sm text-[#C4613A]" data-icon="location_on">location_on</span>
+<span>KUMTA, KARNATAKA, INDIA • GET IN TOUCH</span>
+</div>
+<!-- Headline -->
+<h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#F5F0EA] mb-5">
+          Contact Us
+        </h1>
+<!-- Subtitle -->
+<p class="font-body text-[#B8B0A8] text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          We’d love to hear from you. Reach out to us to plan your perfect Kumta coastal getaway.
+        </p>
+<!-- Highlights Badges -->
+<div class="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-[#B8B0A8]">
+<span class="inline-flex items-center gap-1.5 bg-[#151A22] px-3 py-1.5 rounded-md border border-[#2A3040]">
+<span class="material-symbols-outlined text-[#C4613A] text-base" data-icon="nature_people">nature_people</span>
+            Authentic Coastal Haven
+          </span>
+<span class="inline-flex items-center gap-1.5 bg-[#151A22] px-3 py-1.5 rounded-md border border-[#2A3040]">
+<span class="material-symbols-outlined text-[#C4613A] text-base" data-icon="water">water</span>
+            Aghanashini Estuary
+          </span>
+<span class="inline-flex items-center gap-1.5 bg-[#151A22] px-3 py-1.5 rounded-md border border-[#2A3040]">
+<span class="material-symbols-outlined text-[#25D366] text-base" data-icon="verified">verified</span>
+            Instant WhatsApp Confirmation
+          </span>
+</div>
+</div>
+</section>
+<!-- 3. CONTACT OPTIONS GRID (3 Prominent Cards) -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 mb-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+<!-- Card 1: WhatsApp Booking Card (PRIMARY) -->
+<div class="relative bg-gradient-to-b from-[#1C2330] to-[#151A22] p-8 rounded-xl border-2 border-[#25D366]/40 shadow-xl flex flex-col justify-between group hover:border-[#25D366] transition-all duration-300">
+<div class="absolute -top-3.5 right-6 bg-[#25D366] text-slate-950 text-[11px] font-bold px-3 py-0.5 rounded-full uppercase tracking-wider shadow">
+            Fastest Reply
+          </div>
+<div>
+<div class="w-14 h-14 rounded-xl bg-[#25D366]/15 border border-[#25D366]/30 flex items-center justify-center text-[#25D366] mb-6 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-3xl" data-icon="chat">chat</span>
+</div>
+<h3 class="font-serif text-2xl font-bold text-[#F5F0EA] mb-3">
+              Book via WhatsApp
+            </h3>
+<p class="text-[#B8B0A8] text-sm leading-relaxed mb-6">
+              Chat with us directly for instant booking confirmation, personalized route guidance, and answers to all your questions.
+            </p>
+<div class="p-3 bg-[#0F1218]/60 rounded-lg border border-[#2A3040] mb-6">
+<span class="text-xs text-[#7A7268] uppercase font-semibold block tracking-wider">Direct WhatsApp</span>
+<span class="text-base font-semibold text-[#25D366] tracking-wide">+91 98765 43210</span>
+</div>
+</div>
+<a class="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-[#25D366] hover:bg-[#20ba59] text-slate-950 font-semibold text-sm transition-all duration-200 shadow-md" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-lg" data-icon="send">send</span>
+<span>Message on WhatsApp</span>
+</a>
+</div>
+<!-- Card 2: Email Card -->
+<div class="bg-[#1C2330] p-8 rounded-xl border border-[#2A3040] hover:border-[#C4613A]/50 transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-14 h-14 rounded-xl bg-[#C4613A]/15 border border-[#C4613A]/30 flex items-center justify-center text-[#E8956D] mb-6 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-3xl" data-icon="mail">mail</span>
+</div>
+<h3 class="font-serif text-2xl font-bold text-[#F5F0EA] mb-3">
+              Send an Email
+            </h3>
+<p class="text-[#B8B0A8] text-sm leading-relaxed mb-6">
+              For detailed inquiries, long-stay discounts, group bookings, or feedback.
+            </p>
+<div class="p-3 bg-[#151A22] rounded-lg border border-[#2A3040] mb-6">
+<span class="text-xs text-[#7A7268] uppercase font-semibold block tracking-wider">Direct Email</span>
+<span class="text-base font-semibold text-[#F5F0EA] tracking-wide">stay@seasidekumta.com</span>
+</div>
+</div>
+<a class="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-[#151A22] hover:bg-[#2A3040] text-[#E8956D] border border-[#2A3040] font-semibold text-sm transition-all duration-200" href="mailto:stay@seasidekumta.com">
+<span class="material-symbols-outlined text-lg" data-icon="drafts">drafts</span>
+<span>Send Email</span>
+</a>
+</div>
+<!-- Card 3: Phone / Direct Call Card -->
+<div class="bg-[#1C2330] p-8 rounded-xl border border-[#2A3040] hover:border-[#C4613A]/50 transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-14 h-14 rounded-xl bg-[#C4613A]/15 border border-[#C4613A]/30 flex items-center justify-center text-[#E8956D] mb-6 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-3xl" data-icon="call">call</span>
+</div>
+<h3 class="font-serif text-2xl font-bold text-[#F5F0EA] mb-3">
+              Call Us Directly
+            </h3>
+<p class="text-[#B8B0A8] text-sm leading-relaxed mb-6">
+              Available 9:00 AM to 8:00 PM IST daily for immediate assistance.
+            </p>
+<div class="p-3 bg-[#151A22] rounded-lg border border-[#2A3040] mb-6">
+<span class="text-xs text-[#7A7268] uppercase font-semibold block tracking-wider">Reception Desk</span>
+<span class="text-base font-semibold text-[#F5F0EA] tracking-wide">+91 98765 43210</span>
+</div>
+</div>
+<a class="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-[#C4613A] hover:bg-[#D4724A] text-white font-semibold text-sm transition-all duration-200 shadow-md" href="tel:+919876543210">
+<span class="material-symbols-outlined text-lg" data-icon="phone_in_talk">phone_in_talk</span>
+<span>Call Now</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 4. CONTACT & RESERVATION INQUIRY FORM -->
+<section class="max-w-4xl mx-auto px-6 mb-24" id="reservation-form">
+<div class="relative bg-[#151A22] border border-[#2A3040] rounded-2xl p-8 sm:p-12 custom-glow">
+<!-- Header -->
+<div class="text-center max-w-xl mx-auto mb-10">
+<span class="text-xs uppercase font-bold tracking-widest text-[#C4613A] mb-2 block">Direct Booking Inquiry</span>
+<h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#F5F0EA] mb-3">Send Us a Message</h2>
+<p class="text-[#B8B0A8] text-sm">Plan your stay or ask a question. Fill out the details below.</p>
+</div>
+<form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you! Your message has been received. We will respond shortly via WhatsApp or Email.');">
+<!-- Row 1: Full Name & Email -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs uppercase tracking-wider font-semibold text-[#B8B0A8] mb-2">Full Name *</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-3.5 text-stone-500 text-lg" data-icon="person">person</span>
+<input class="w-full bg-[#0F1218]/90 border border-[#2A3040] rounded-lg pl-10 pr-4 py-3 text-sm text-[#F5F0EA] placeholder-[#7A7268] focus:border-[#C4613A] focus:ring-1 focus:ring-[#C4613A] focus:outline-none transition-colors" placeholder="e.g. Ramesh Hegde" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-wider font-semibold text-[#B8B0A8] mb-2">Email Address *</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-3.5 text-stone-500 text-lg" data-icon="alternate_email">alternate_email</span>
+<input class="w-full bg-[#0F1218]/90 border border-[#2A3040] rounded-lg pl-10 pr-4 py-3 text-sm text-[#F5F0EA] placeholder-[#7A7268] focus:border-[#C4613A] focus:ring-1 focus:ring-[#C4613A] focus:outline-none transition-colors" placeholder="ramesh@example.com" required="" type="email"/>
+</div>
+</div>
+</div>
+<!-- Row 2: Phone & Number of Guests -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs uppercase tracking-wider font-semibold text-[#B8B0A8] mb-2">Phone Number (WhatsApp) *</label>
+<div class="relative flex">
+<span class="inline-flex items-center px-3.5 rounded-l-lg border border-r-0 border-[#2A3040] bg-[#1C2330] text-[#B8B0A8] text-sm font-medium">
+                  +91
+                </span>
+<input class="w-full bg-[#0F1218]/90 border border-[#2A3040] rounded-r-lg px-4 py-3 text-sm text-[#F5F0EA] placeholder-[#7A7268] focus:border-[#C4613A] focus:ring-1 focus:ring-[#C4613A] focus:outline-none transition-colors" placeholder="98765 00000" required="" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-wider font-semibold text-[#B8B0A8] mb-2">Number of Guests *</label>
+<div class="relative">
+<select class="w-full bg-[#0F1218]/90 border border-[#2A3040] rounded-lg px-4 py-3 text-sm text-[#F5F0EA] focus:border-[#C4613A] focus:ring-1 focus:ring-[#C4613A] focus:outline-none transition-colors">
+<option value="1">1 Guest</option>
+<option selected="" value="2">2 Guests</option>
+<option value="3">3 Guests</option>
+<option value="4">4+ Guests</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Row 3: Check-in & Check-out Dates -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs uppercase tracking-wider font-semibold text-[#B8B0A8] mb-2">Expected Check-in Date</label>
+<div class="relative">
+<input class="w-full bg-[#0F1218]/90 border border-[#2A3040] rounded-lg px-4 py-3 text-sm text-[#F5F0EA] focus:border-[#C4613A] focus:ring-1 focus:ring-[#C4613A] focus:outline-none transition-colors" type="date"/>
+</div>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-wider font-semibold text-[#B8B0A8] mb-2">Expected Check-out Date</label>
+<div class="relative">
+<input class="w-full bg-[#0F1218]/90 border border-[#2A3040] rounded-lg px-4 py-3 text-sm text-[#F5F0EA] focus:border-[#C4613A] focus:ring-1 focus:ring-[#C4613A] focus:outline-none transition-colors" type="date"/>
+</div>
+</div>
+</div>
+<!-- Row 4: Preferred Room Type -->
+<div>
+<label class="block text-xs uppercase tracking-wider font-semibold text-[#B8B0A8] mb-2">Preferred Room Type</label>
+<select class="w-full bg-[#0F1218]/90 border border-[#2A3040] rounded-lg px-4 py-3 text-sm text-[#F5F0EA] focus:border-[#C4613A] focus:ring-1 focus:ring-[#C4613A] focus:outline-none transition-colors">
+<option value="river">The River Room (Estuary View &amp; Private Veranda)</option>
+<option value="garden">The Garden Room (Coconut Grove &amp; Breezy Courtyard)</option>
+<option value="both">Both / Whole Property (Private Exclusive Stay)</option>
+</select>
+</div>
+<!-- Full Width: Message / Special Requests -->
+<div>
+<label class="block text-xs uppercase tracking-wider font-semibold text-[#B8B0A8] mb-2">Special Requests / Message</label>
+<textarea class="w-full bg-[#0F1218]/90 border border-[#2A3040] rounded-lg p-4 text-sm text-[#F5F0EA] placeholder-[#7A7268] focus:border-[#C4613A] focus:ring-1 focus:ring-[#C4613A] focus:outline-none transition-colors" placeholder="Let us know your arrival time, dietary preferences for home-cooked meals, or any questions about Kumta..." rows="4"></textarea>
+</div>
+<!-- Submit Button & Guarantee Note -->
+<div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#C4613A] hover:bg-[#D4724A] text-white font-medium py-3.5 px-8 rounded-lg shadow-md transition-all duration-200 active:scale-95 text-sm" type="submit">
+<span>Send Message</span>
+<span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<p class="text-xs text-[#B8B0A8] text-center sm:text-right">
+<span class="text-[#25D366] font-semibold">✓</span> We typically respond within 2–4 hours. No hidden booking fees when reserving directly.
+            </p>
+</div>
+</form>
+</div>
+</section>
+<!-- 5. ADDITIONAL INFO & PROPERTY DETAILS SECTION -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 mb-20">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+<!-- Column 1: Visit Us & Location -->
+<div class="bg-[#151A22] border border-[#2A3040] rounded-xl p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-[#C4613A] mb-3">
+<span class="material-symbols-outlined text-2xl" data-icon="explore">explore</span>
+<span class="text-xs uppercase font-bold tracking-wider">Directions &amp; Geography</span>
+</div>
+<h3 class="font-serif text-2xl sm:text-3xl font-bold text-[#F5F0EA] mb-4">Visit Us &amp; Location</h3>
+<!-- Address Card -->
+<div class="bg-[#1C2330] p-5 rounded-lg border border-[#2A3040] mb-6">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#C4613A] text-xl mt-0.5" data-icon="pin_drop">pin_drop</span>
+<div class="space-y-1 text-sm">
+<p class="text-[#F5F0EA] font-medium">Seaside Guest House</p>
+<p class="text-[#B8B0A8]">Aghanashini Estuary Road, Kumta, Uttara Kannada, Karnataka - 581343, India</p>
+<p class="text-[#E8956D] text-xs pt-1">
+<span class="font-semibold">Landmark:</span> Near Aghanashini River Estuary • 800m to Kumta Beach
+                  </p>
+<p class="text-[#7A7268] text-xs font-mono">Coordinates: 14.4238° N, 74.4172° E</p>
+</div>
+</div>
+</div>
+<!-- Stylized Visual Map Card -->
+<div class="relative rounded-lg overflow-hidden border border-[#2A3040] h-52 mb-6 group">
+<img class="w-full h-full object-cover brightness-75 group-hover:scale-105 transition-transform duration-500" data-alt="An atmospheric aerial map perspective of the lush tropical coastline of Kumta Karnataka where the serene turquoise Aghanashini River estuary smoothly meets the dark blue Arabian Sea. Flanked by dense coconut palm groves, warm golden sands, and traditional tile-roof coastal cottages bathed in golden hour evening light with deep moody shadows." data-location="Kumta" src="images/coastalroad.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-[#F5F0EA] bg-[#0F1218]/90 backdrop-blur-sm p-2.5 rounded border border-[#2A3040]">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#C4613A] animate-ping"></span>
+<span class="font-medium text-xs">Kumta Estuary Belt</span>
+</div>
+<span class="text-[#B8B0A8]">8 min from Kumta Railway Station</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#C4613A] hover:bg-[#D4724A] text-white text-xs font-semibold tracking-wide transition-all shadow-sm" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base" data-icon="map">map</span>
+<span>Open in Google Maps</span>
+</a>
+<a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#1C2330] hover:bg-[#2A3040] text-[#B8B0A8] hover:text-[#F5F0EA] text-xs font-semibold tracking-wide border border-[#2A3040] transition-colors" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base" data-icon="directions">directions</span>
+<span>Get Turn-by-Turn Directions</span>
+</a>
+</div>
+</div>
+<!-- Column 2: Quick Guest Information -->
+<div class="bg-[#151A22] border border-[#2A3040] rounded-xl p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-[#C4613A] mb-3">
+<span class="material-symbols-outlined text-2xl" data-icon="info">info</span>
+<span class="text-xs uppercase font-bold tracking-wider">Stay Guidelines</span>
+</div>
+<h3 class="font-serif text-2xl sm:text-3xl font-bold text-[#F5F0EA] mb-6">Quick Guest Information</h3>
+<!-- Grid of Badge Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Check-in -->
+<div class="p-4 rounded-lg bg-[#1C2330] border border-[#2A3040]">
+<div class="flex items-center gap-2.5 mb-1.5">
+<span class="material-symbols-outlined text-[#C4613A] text-xl" data-icon="login">login</span>
+<span class="text-xs uppercase font-bold text-[#F5F0EA]">Check-in</span>
+</div>
+<p class="text-sm font-semibold text-[#E8956D]">11:00 AM</p>
+<p class="text-xs text-[#7A7268] mt-0.5">Early check-in on request</p>
+</div>
+<!-- Check-out -->
+<div class="p-4 rounded-lg bg-[#1C2330] border border-[#2A3040]">
+<div class="flex items-center gap-2.5 mb-1.5">
+<span class="material-symbols-outlined text-[#C4613A] text-xl" data-icon="logout">logout</span>
+<span class="text-xs uppercase font-bold text-[#F5F0EA]">Check-out</span>
+</div>
+<p class="text-sm font-semibold text-[#E8956D]">10:00 AM</p>
+<p class="text-xs text-[#7A7268] mt-0.5">Late check-out subject to availability</p>
+</div>
+<!-- Languages -->
+<div class="p-4 rounded-lg bg-[#1C2330] border border-[#2A3040]">
+<div class="flex items-center gap-2.5 mb-1.5">
+<span class="material-symbols-outlined text-[#C4613A] text-xl" data-icon="translate">translate</span>
+<span class="text-xs uppercase font-bold text-[#F5F0EA]">Languages Spoken</span>
+</div>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">English, Kannada, Hindi, Konkani</p>
+</div>
+<!-- Pets Policy -->
+<div class="p-4 rounded-lg bg-[#1C2330] border border-[#2A3040]">
+<div class="flex items-center gap-2.5 mb-1.5">
+<span class="material-symbols-outlined text-[#C4613A] text-xl" data-icon="pets">pets</span>
+<span class="text-xs uppercase font-bold text-[#F5F0EA]">Pets Policy</span>
+</div>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">Not allowed (to preserve local estuary birdlife)</p>
+</div>
+<!-- Smoking -->
+<div class="p-4 rounded-lg bg-[#1C2330] border border-[#2A3040]">
+<div class="flex items-center gap-2.5 mb-1.5">
+<span class="material-symbols-outlined text-[#C4613A] text-xl" data-icon="smoking_rooms">smoking_rooms</span>
+<span class="text-xs uppercase font-bold text-[#F5F0EA]">Smoking Policy</span>
+</div>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">Designated outdoor veranda areas only</p>
+</div>
+<!-- Parking -->
+<div class="p-4 rounded-lg bg-[#1C2330] border border-[#2A3040]">
+<div class="flex items-center gap-2.5 mb-1.5">
+<span class="material-symbols-outlined text-[#C4613A] text-xl" data-icon="local_parking">local_parking</span>
+<span class="text-xs uppercase font-bold text-[#F5F0EA]">Parking</span>
+</div>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">Complimentary on-site secure parking for cars &amp; 2-wheelers</p>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-[#2A3040] flex items-center justify-between text-xs text-[#7A7268]">
+<span>Need early bag drop?</span>
+<span class="text-[#E8956D]">Notify us ahead via WhatsApp</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. AIRBNB PARTNERSHIP CARD -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 mb-20">
+<div class="bg-gradient-to-r from-[#1C2330] via-[#151A22] to-[#1C2330] border border-[#2A3040] rounded-xl p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 w-64 h-64 bg-[#FF5A5F]/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="space-y-4 max-w-2xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#FF5A5F] text-3xl" data-icon="hotel">hotel</span>
+<span class="text-xs font-bold tracking-widest uppercase bg-[#FF5A5F]/10 text-[#FF5A5F] px-3 py-1 rounded-full border border-[#FF5A5F]/30">
+              Superhost status • 5.0 ★ Rated
+            </span>
+</div>
+<h3 class="font-serif text-2xl sm:text-3xl font-bold text-[#F5F0EA]">
+            Also Available on Airbnb
+          </h3>
+<p class="text-[#B8B0A8] text-sm leading-relaxed">
+            Prefer booking via trusted platforms? Check live calendar availability, read verified guest reviews, and book securely on Airbnb.
+          </p>
+</div>
+<div class="flex-shrink-0">
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-[#FF5A5F] hover:bg-[#e0484d] text-white font-semibold text-sm transition-all duration-200 active:scale-95 shadow-lg" href="https://www.airbnb.co.in/rooms/1754501200326210708" rel="noopener noreferrer" target="_blank">
+<span>View on Airbnb</span>
+<span class="material-symbols-outlined text-base" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 7. FREQUENTLY ASKED QUESTIONS -->
+<section class="max-w-4xl mx-auto px-6 mb-20">
+<div class="text-center mb-12">
+<span class="text-xs uppercase font-bold tracking-widest text-[#C4613A] mb-2 block">Helpful Details</span>
+<h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#F5F0EA] mb-3">Frequently Asked Questions</h2>
+<p class="text-[#B8B0A8] text-sm">Everything you need to know before visiting our quiet estuary sanctuary.</p>
+</div>
+<div class="space-y-4">
+<!-- FAQ 1 -->
+<details class="group bg-[#151A22] border border-[#2A3040] rounded-xl p-5 [&amp;_summary::-webkit-details-marker]:hidden transition-all duration-200 open:border-[#C4613A]/50">
+<summary class="flex items-center justify-between cursor-pointer text-[#F5F0EA] font-serif text-lg font-medium">
+<span>What are the check-in and check-out timings?</span>
+<span class="material-symbols-outlined text-[#C4613A] transition-transform duration-300 group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-4 text-[#B8B0A8] text-sm leading-relaxed border-t border-[#2A3040] pt-4">
+            Standard check-in begins at 11:00 AM and check-out is by 10:00 AM. Early check-in or late luggage drop can be coordinated via WhatsApp prior to arrival.
+          </p>
+</details>
+<!-- FAQ 2 -->
+<details class="group bg-[#151A22] border border-[#2A3040] rounded-xl p-5 [&amp;_summary::-webkit-details-marker]:hidden transition-all duration-200 open:border-[#C4613A]/50">
+<summary class="flex items-center justify-between cursor-pointer text-[#F5F0EA] font-serif text-lg font-medium">
+<span>Is high-speed Wi-Fi available for remote work?</span>
+<span class="material-symbols-outlined text-[#C4613A] transition-transform duration-300 group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-4 text-[#B8B0A8] text-sm leading-relaxed border-t border-[#2A3040] pt-4">
+            Yes, we provide complimentary high-speed optical fiber Wi-Fi throughout the guest house bedrooms, balconies, and communal verandas.
+          </p>
+</details>
+<!-- FAQ 3 -->
+<details class="group bg-[#151A22] border border-[#2A3040] rounded-xl p-5 [&amp;_summary::-webkit-details-marker]:hidden transition-all duration-200 open:border-[#C4613A]/50">
+<summary class="flex items-center justify-between cursor-pointer text-[#F5F0EA] font-serif text-lg font-medium">
+<span>How far is the beach and the estuary?</span>
+<span class="material-symbols-outlined text-[#C4613A] transition-transform duration-300 group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-4 text-[#B8B0A8] text-sm leading-relaxed border-t border-[#2A3040] pt-4">
+            The serene Kumta Beach is just an 800m gentle walk (under 10 minutes), while the Aghanashini River estuary banks are merely 150m from our front gate.
+          </p>
+</details>
+<!-- FAQ 4 -->
+<details class="group bg-[#151A22] border border-[#2A3040] rounded-xl p-5 [&amp;_summary::-webkit-details-marker]:hidden transition-all duration-200 open:border-[#C4613A]/50">
+<summary class="flex items-center justify-between cursor-pointer text-[#F5F0EA] font-serif text-lg font-medium">
+<span>What is the cancellation policy?</span>
+<span class="material-symbols-outlined text-[#C4613A] transition-transform duration-300 group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-4 text-[#B8B0A8] text-sm leading-relaxed border-t border-[#2A3040] pt-4">
+            For direct bookings via WhatsApp or email, free cancellation is provided up to 5 days prior to arrival. Airbnb bookings follow our standard Flexible listing policy.
+          </p>
+</details>
+<!-- FAQ 5 -->
+<details class="group bg-[#151A22] border border-[#2A3040] rounded-xl p-5 [&amp;_summary::-webkit-details-marker]:hidden transition-all duration-200 open:border-[#C4613A]/50">
+<summary class="flex items-center justify-between cursor-pointer text-[#F5F0EA] font-serif text-lg font-medium">
+<span>Are home-cooked coastal meals available?</span>
+<span class="material-symbols-outlined text-[#C4613A] transition-transform duration-300 group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-4 text-[#B8B0A8] text-sm leading-relaxed border-t border-[#2A3040] pt-4">
+            Yes, authentic Konkan-style vegetarian and fresh coastal seafood meals can be arranged with advance notice made freshly by our local host.
+          </p>
+</details>
+</div>
+</section>
+<!-- 8. DIRECT RESERVATION CALLOUT BANNER -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 mb-10">
+<div class="relative rounded-2xl p-8 sm:p-12 overflow-hidden bg-gradient-to-r from-[#C4613A] via-[#B55530] to-[#8C3C1E] shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+<div class="relative z-10 max-w-xl">
+<h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-3">
+            Ready to Experience Seaside?
+          </h2>
+<p class="text-amber-100 text-sm sm:text-base leading-relaxed">
+            Reserve your quiet coastal retreat where the river whispers to the sea. Instant confirmation and best guaranteed rates on direct booking.
+          </p>
+</div>
+<div class="relative z-10 flex flex-wrap items-center justify-center gap-4 flex-shrink-0">
+<a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg bg-[#25D366] hover:bg-[#20ba59] text-slate-950 font-bold text-sm shadow-md transition-all active:scale-95" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xl" data-icon="chat">chat</span>
+<span>Book via WhatsApp</span>
+</a>
+<a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg bg-black/30 hover:bg-black/40 text-white font-semibold text-sm border border-white/20 backdrop-blur-sm transition-all active:scale-95" href="tel:+919876543210">
+<span class="material-symbols-outlined text-xl" data-icon="call">call</span>
+<span>Call Front Desk</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- 9. FOOTER (Shared Component Mapping) -->
+<footer class="docked full-width bottom bg-neutral-950 dark:bg-neutral-950 border-t border-neutral-800 flat no shadows w-full">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col gap-10 w-full">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Brand Info -->
+<div class="md:col-span-2 space-y-4">
+<h4 class="font-serif italic text-xl font-bold text-stone-100 dark:text-stone-100">
+            Seaside Guest House
+          </h4>
+<p class="font-serif italic text-amber-600 dark:text-amber-600 text-sm">
+            Where the River Meets the Sea
+          </p>
+<p class="text-stone-400 dark:text-stone-400 text-sm leading-relaxed max-w-sm">
+            A traditional boutique stay situated peacefully beside the Aghanashini Estuary in Kumta, Karnataka. Handcrafted coastal hospitality.
+          </p>
+<div class="flex items-center gap-4 pt-2">
+<a aria-label="WhatsApp" class="text-stone-400 hover:text-stone-100 transition-colors" href="https://wa.me/919876543210">
+<span class="material-symbols-outlined text-xl" data-icon="chat">chat</span>
+</a>
+<a aria-label="Email" class="text-stone-400 hover:text-stone-100 transition-colors" href="mailto:stay@seasidekumta.com">
+<span class="material-symbols-outlined text-xl" data-icon="mail">mail</span>
+</a>
+<a aria-label="Phone" class="text-stone-400 hover:text-stone-100 transition-colors" href="tel:+919876543210">
+<span class="material-symbols-outlined text-xl" data-icon="call">call</span>
+</a>
+</div>
+</div>
+<!-- Links Col 1 -->
+<div class="space-y-3">
+<h5 class="text-xs uppercase font-bold tracking-wider text-stone-100 dark:text-stone-100">Explore</h5>
+<ul class="space-y-2 text-sm">
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">About Kumta</a></li>
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Rooms &amp; Suites</a></li>
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Experiences</a></li>
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Local Cuisine</a></li>
+</ul>
+</div>
+<!-- Links Col 2 -->
+<div class="space-y-3">
+<h5 class="text-xs uppercase font-bold tracking-wider text-stone-100 dark:text-stone-100">Support &amp; Policies</h5>
+<ul class="space-y-2 text-sm">
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">House Rules</a></li>
+<li><a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-stone-100 dark:text-stone-100 font-medium" href="#">Contact &amp; Directions</a></li>
+</ul>
+</div>
+</div>
+<!-- Copyright -->
+<div class="pt-8 border-t border-neutral-800 text-xs text-stone-400 dark:text-stone-400 flex flex-col sm:flex-row items-center justify-between gap-4">
+<span>© 2024 Seaside Guest House, Kumta, Karnataka. All rights reserved. Where the River Meets the Sea.</span>
+<span class="text-stone-500">Crafted for coastal tranquility.</span>
+</div>
+</div>
+</footer>
+<!-- Mobile Navbar Toggle & Motion Scripts -->
+<script>
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        if (menuIcon) {
+          menuIcon.textContent = isHidden ? 'menu' : 'close';
+        }
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          if (menuIcon) menuIcon.textContent = 'menu';
+        });
+      });
+    }
+
+    // Scroll Reveal Observer
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { root: null, threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Navbar Scroll Elevation
+    const header = document.querySelector('header');
+    if (header) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }, { passive: true });
+    }
+</script>
+</body></html>
