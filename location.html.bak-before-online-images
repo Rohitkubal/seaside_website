@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Location &amp; Directions | Seaside Guest House, Kumta</title>
+<!-- Tailwind CSS & Google Fonts -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0F1218',
+              surface: '#151A22',
+              card: '#1C2330',
+              primary: '#C4613A',
+              primaryHover: '#D4724A',
+              warm: '#E8956D',
+              cream: '#F5F0EA',
+              secondary: '#B8B0A8',
+              muted: '#7A7268',
+              divider: '#2A3040',
+              whatsapp: '#25D366'
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+            sans: ['Inter', 'sans-serif']
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .font-serif-italic {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .glass-card {
+      background: rgba(28, 35, 48, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(196, 97, 58, 0.18);
+    }
+    .glass-card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card-hover:hover {
+      border-color: rgba(196, 97, 58, 0.45);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.6);
+    }
+    
+    /* Elegant Motion Suite */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+      50% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    }
+    
+    .animate-float-slow {
+      animation: floatSlow 6s ease-in-out infinite;
+    }
+    .animate-pulse-glow {
+      animation: pulseGlow 3s infinite;
+    }
+    
+    /* Scroll Reveal System */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .stagger-1 { transition-delay: 100ms; }
+    .stagger-2 { transition-delay: 200ms; }
+    .stagger-3 { transition-delay: 300ms; }
+    .stagger-4 { transition-delay: 400ms; }
+    
+    /* Navbar Scroll Elevation */
+    header.scrolled {
+      background: rgba(15, 18, 24, 0.96) !important;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7) !important;
+      border-color: rgba(42, 48, 64, 0.95) !important;
+    }
+  </style>
+</head>
+<body class="bg-[#0F1218] text-[#F5F0EA] font-body selection:bg-amber-700 selection:text-white antialiased overflow-x-hidden">
+<!-- TOP APP BAR / NAVBAR -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-[#0F1218]/90 backdrop-blur-md border-b border-[#2A3040]/80 shadow-lg shadow-black/20 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between h-20 w-full">
+    <!-- Brand Logo -->
+    <a class="flex items-center gap-2.5 group cursor-pointer flex-shrink-0" href="index.html">
+      <span class="material-symbols-outlined text-amber-500 text-2xl sm:text-3xl group-hover:rotate-12 transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">sailing</span>
+      <span class="font-serif italic text-xl sm:text-2xl font-bold tracking-tight text-amber-500 group-hover:text-amber-400 transition-colors whitespace-nowrap">
+        Seaside Guest House
+      </span>
+    </a>
+    
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium tracking-wide">
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="index.html">
+        Home
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="index.html#about">
+        About
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="rooms.html">
+        Rooms
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="index.html#amenities">
+        Amenities
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="gallery.html">
+        Gallery
+      </a>
+      <a class="text-amber-500 font-semibold border-b-2 border-amber-500 pb-1" href="location.html">
+        Location
+      </a>
+      <a class="text-stone-300 hover:text-amber-400 transition-colors duration-200" href="contact.html">
+        Contact
+      </a>
+    </nav>
+
+    <!-- Trailing Action Buttons -->
+    <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+      <!-- Secondary: Chat on WhatsApp -->
+      <a class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-semibold bg-[#25D366]/15 hover:bg-[#25D366] text-[#25D366] hover:text-white border border-[#25D366]/30 transition-all duration-200 active:scale-95 shadow-sm animate-pulse-glow" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined text-base">chat</span>
+        <span>Chat on WhatsApp</span>
+      </a>
+      <!-- Primary: Book Now -->
+      <a class="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium uppercase tracking-wider bg-[#C4613A] hover:bg-[#D4724A] text-white shadow-md shadow-[#C4613A]/25 transition-all duration-200 active:scale-95" href="contact.html#reservation-form">
+        <span>Book Now</span>
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
+      <!-- Mobile Hamburger Toggle -->
+      <button aria-label="Toggle navigation" class="lg:hidden text-stone-200 hover:text-amber-500 focus:outline-none p-1.5 transition-colors" id="mobile-menu-btn">
+        <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="hidden lg:hidden bg-[#0F1218]/98 backdrop-blur-xl border-b border-neutral-800 px-6 py-6 space-y-4 shadow-2xl transition-all duration-300" id="mobile-menu">
+    <div class="flex flex-col space-y-3 font-medium">
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="index.html">Home</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="index.html#about">About</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="rooms.html">Rooms</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="index.html#amenities">Amenities</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="gallery.html">Gallery</a>
+      <a class="text-amber-500 font-semibold py-1 border-l-2 border-amber-500 pl-3" href="location.html">Location</a>
+      <a class="text-stone-300 hover:text-amber-400 py-1 pl-3 transition-colors" href="contact.html">Contact</a>
+    </div>
+    <div class="pt-4 border-t border-[#2A3040] flex flex-col gap-3">
+      <a class="inline-flex items-center justify-center gap-2 py-2.5 rounded-full text-sm font-semibold bg-[#25D366] text-white" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined text-base">chat</span>
+        Chat on WhatsApp
+      </a>
+      <a class="inline-flex items-center justify-center py-2.5 rounded-full text-sm font-medium bg-[#C4613A] text-white" href="contact.html#reservation-form">
+        Book Now
+      </a>
+    </div>
+  </div>
+</header>
+<main class="pt-20">
+<!-- HERO SECTION -->
+<header class="relative pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden border-b border-neutral-800/80">
+<!-- Background Ambient Glow -->
+<div class="absolute inset-0 pointer-events-none opacity-25">
+<div class="absolute top-0 right-1/4 w-96 h-96 bg-amber-700/30 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-1/4 w-80 h-80 bg-[#C4613A]/20 rounded-full blur-3xl"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+<!-- Badge -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-900/90 border border-amber-700/40 text-xs tracking-wider uppercase text-amber-500 font-semibold mb-6">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-ping"></span>
+<span>KUMTA, KARNATAKA, INDIA • TRAVEL &amp; DIRECTIONS</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+<div class="lg:col-span-8">
+<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-[#F5F0EA] tracking-tight leading-[1.1] mb-6">
+              Location
+            </h1>
+<p class="text-lg md:text-xl text-[#B8B0A8] font-light max-w-2xl leading-relaxed">
+              Find us in the heart of Kumta — where the serene Aghanashini river estuary meets the majestic Arabian Sea. Untouched beaches, dense coconut groves, and tranquil backwaters.
+            </p>
+</div>
+<!-- Quick Badges -->
+<div class="lg:col-span-4 flex flex-wrap lg:flex-col gap-3 justify-start lg:items-end">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1C2330]/80 border border-amber-700/25 text-xs text-[#F5F0EA]">
+<span class="material-symbols-outlined text-amber-500 text-sm" data-icon="waves">waves</span>
+<span>Authentic Coastal Haven</span>
+</div>
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1C2330]/80 border border-amber-700/25 text-xs text-[#F5F0EA]">
+<span class="material-symbols-outlined text-amber-500 text-sm" data-icon="sailing">sailing</span>
+<span>Aghanashini Estuary</span>
+</div>
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1C2330]/80 border border-amber-700/25 text-xs text-[#F5F0EA]">
+<span class="material-symbols-outlined text-amber-500 text-sm" data-icon="explore">explore</span>
+<span>Pristine Karnataka Coastline</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- STYLIZED INTERACTIVE MAP EMBED SECTION -->
+<section class="py-14 md:py-18 bg-[#0F1218]">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="relative glass-card rounded-2xl overflow-hidden shadow-2xl border border-neutral-800">
+<!-- Map Visual Presentation -->
+<div class="relative h-[440px] md:h-[500px] w-full bg-[#151A22] overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 filter brightness-90 contrast-110" data-alt="A stylized, high-contrast dark aerial cartographic view of Kumta coastline in Karnataka, showing the dramatic serpentine mouth of the Aghanashini river estuary flowing into the deep blue Arabian Sea. The coastline is laced with dense coconut palm groves, warm earthy terracotta soil accents, and a solitary glowing golden pin marker indicating Seaside Guest House with subtle navigational ripples." data-location="Kumta, Karnataka" src="images/coastalroad.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-[#0F1218]/40 pointer-events-none"></div>
+<!-- Stylized Floating Pin Marker -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-none z-10">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-12 h-12 bg-amber-600/30 rounded-full animate-ping"></span>
+<span class="relative flex items-center justify-center w-10 h-10 bg-amber-700 rounded-full border-2 border-[#F5F0EA] shadow-xl text-white">
+<span class="material-symbols-outlined text-xl" data-icon="hotel" data-weight="fill" style="font-variation-settings: 'FILL' 1;">hotel</span>
+</span>
+</div>
+<div class="mt-2 px-3 py-1 bg-neutral-950/90 border border-amber-700/50 rounded-md backdrop-blur-md text-[11px] font-medium text-amber-400 shadow-md">
+                Seaside Guest House
+              </div>
+</div>
+<!-- Top Left Floating Badge -->
+<div class="absolute top-6 left-6 z-20 max-w-sm">
+<div class="bg-neutral-950/90 backdrop-blur-md border border-neutral-700/80 rounded-xl p-4 shadow-xl">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-amber-500 text-2xl mt-0.5" data-icon="pin_drop" data-weight="fill" style="font-variation-settings: 'FILL' 1;">pin_drop</span>
+<div>
+<h3 class="text-xs uppercase tracking-wider font-semibold text-amber-500">Official Guest House Address</h3>
+<p class="text-sm font-medium text-[#F5F0EA] mt-1 leading-snug">
+                      Aghanashini Estuary Road, Kumta, Uttara Kannada, Karnataka — 581343
+                    </p>
+<p class="text-xs text-[#B8B0A8] mt-1">
+                      Coordinates: 14.4238° N, 74.4172° E
+                    </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Floating Action Strip -->
+<div class="absolute bottom-6 left-6 right-6 z-20 flex flex-col sm:flex-row items-center justify-between gap-4 bg-neutral-950/90 backdrop-blur-lg border border-amber-700/30 rounded-xl p-4 md:px-6 shadow-2xl">
+<div class="flex items-center gap-3">
+<div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+<div class="text-xs md:text-sm text-[#F5F0EA]">
+<span class="text-amber-500 font-medium">Proximity:</span> 800m stroll to pristine Arabian Sea shore • 150m to Aghanashini riverbank
+                </div>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<a class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-white transition-all duration-200 text-xs md:text-sm font-medium" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base" data-icon="open_in_new">open_in_new</span>
+<span>Open in Google Maps</span>
+</a>
+<a class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-amber-700 hover:bg-amber-600 text-white transition-all duration-200 text-xs md:text-sm font-medium shadow-md" href="#directions">
+<span class="material-symbols-outlined text-base" data-icon="directions">directions</span>
+<span>Get Turn-by-Turn</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- HOW TO REACH US (TWO COLUMN BENTO LAYOUT) -->
+<section class="py-16 md:py-24 border-t border-neutral-800/80 bg-[#151A22]/50" id="directions">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="mb-14">
+<p class="text-xs uppercase tracking-widest text-amber-600 font-semibold mb-2">Transit &amp; Connectivity</p>
+<h2 class="text-3xl sm:text-4xl font-serif text-[#F5F0EA]">How to Reach Seaside</h2>
+<p class="text-sm text-[#B8B0A8] mt-2 max-w-xl">
+            Kumta is well connected via scenic coastal railways and NH66 National Highway. We are happy to arrange reliable local tuk-tuk or private taxi pickups directly to our porch.
+          </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Transit Modes -->
+<div class="lg:col-span-7 space-y-4">
+<!-- Air -->
+<div class="glass-card glass-card-hover rounded-xl p-5 md:p-6 border border-neutral-800">
+<div class="flex items-start gap-4">
+<div class="p-3 rounded-lg bg-amber-700/15 border border-amber-700/30 text-amber-500">
+<span class="material-symbols-outlined text-2xl" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-serif text-[#F5F0EA] font-semibold">By Air</h3>
+<span class="text-xs font-mono px-2 py-0.5 rounded bg-neutral-900 text-amber-500 border border-neutral-700">140 - 170 km</span>
+</div>
+<p class="text-sm text-[#B8B0A8] mt-2 leading-relaxed">
+                    Nearest airports are <strong class="text-white">Dabolim Airport, Goa (GOI)</strong> (~170 km / 3.5 hrs drive) and <strong class="text-white">Hubli Airport (HBX)</strong> (~140 km / 2.5 hrs). Both provide easy highway connectivity directly through lush Western Ghat descents. Private cab pickups can be scheduled in advance.
+                  </p>
+</div>
+</div>
+</div>
+<!-- Train -->
+<div class="glass-card glass-card-hover rounded-xl p-5 md:p-6 border border-amber-700/30 bg-[#1C2330]/90">
+<div class="flex items-start gap-4">
+<div class="p-3 rounded-lg bg-amber-700/20 border border-amber-700/40 text-amber-500">
+<span class="material-symbols-outlined text-2xl" data-icon="train">train</span>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-serif text-[#F5F0EA] font-semibold">By Train (Konkan Railway)</h3>
+<span class="text-xs font-mono px-2 py-0.5 rounded bg-amber-950/80 text-amber-400 border border-amber-700/50">Most Recommended • 2 km</span>
+</div>
+<p class="text-sm text-[#B8B0A8] mt-2 leading-relaxed">
+<strong class="text-white">Kumta Railway Station (KT)</strong> is just 2 km away (5 minutes drive). Direct Superfast &amp; Express trains run frequently from Mumbai, Goa (Madgaon), Mangalore, Kochi, and Bengaluru (via Yesvantpur/Karwar Express).
+                  </p>
+<div class="mt-3 flex items-center gap-2 text-xs text-amber-400">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span>Complimentary station pickup is available on advance booking request.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bus -->
+<div class="glass-card glass-card-hover rounded-xl p-5 md:p-6 border border-neutral-800">
+<div class="flex items-start gap-4">
+<div class="p-3 rounded-lg bg-amber-700/15 border border-amber-700/30 text-amber-500">
+<span class="material-symbols-outlined text-2xl" data-icon="directions_bus">directions_bus</span>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-serif text-[#F5F0EA] font-semibold">By Bus</h3>
+<span class="text-xs font-mono px-2 py-0.5 rounded bg-neutral-900 text-amber-500 border border-neutral-700">Daily Night Services</span>
+</div>
+<p class="text-sm text-[#B8B0A8] mt-2 leading-relaxed">
+                    KSRTC Airavat, Rajahamsa, and multiple private luxury sleeper coaches operate daily between Kumta and Bengaluru (10 hrs overnight), Mangalore (3.5 hrs), Pune, and Goa (3 hrs). The Kumta Central Bus Stand is 2.5 km from the guest house.
+                  </p>
+</div>
+</div>
+</div>
+<!-- Car -->
+<div class="glass-card glass-card-hover rounded-xl p-5 md:p-6 border border-neutral-800">
+<div class="flex items-start gap-4">
+<div class="p-3 rounded-lg bg-amber-700/15 border border-amber-700/30 text-amber-500">
+<span class="material-symbols-outlined text-2xl" data-icon="directions_car">directions_car</span>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-serif text-[#F5F0EA] font-semibold">By Car &amp; Road</h3>
+<span class="text-xs font-mono px-2 py-0.5 rounded bg-neutral-900 text-amber-500 border border-neutral-700">NH-66 Coastal Highway</span>
+</div>
+<p class="text-sm text-[#B8B0A8] mt-2 leading-relaxed">
+                    NH66 (Panvel-Kanyakumari coastal highway) passes right along the periphery of Kumta town. A scenic drive with picturesque bridges crossing estuaries. We offer secure, enclosed on-site car parking for all visiting guests.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Proximity Distance Grid -->
+<div class="lg:col-span-5">
+<div class="glass-card rounded-2xl p-6 border border-neutral-800">
+<div class="flex items-center gap-3 mb-6 pb-4 border-b border-neutral-800">
+<span class="material-symbols-outlined text-amber-500" data-icon="near_me">near_me</span>
+<div>
+<h3 class="text-lg font-serif text-[#F5F0EA]">Proximity &amp; Distances</h3>
+<p class="text-xs text-[#B8B0A8]">Key transit hubs and nearby heritage locations</p>
+</div>
+</div>
+<div class="space-y-3.5">
+<div class="flex items-center justify-between p-3 rounded-lg bg-[#151A22] border border-neutral-800 hover:border-amber-700/30 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-600 text-lg" data-icon="beach_access">beach_access</span>
+<span class="text-sm font-medium text-[#F5F0EA]">Kumta Beach &amp; Estuary</span>
+</div>
+<div class="text-right">
+<div class="text-sm font-semibold text-amber-400">800 m</div>
+<div class="text-[10px] text-[#7A7268]">10 min stroll</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-[#151A22] border border-neutral-800 hover:border-amber-700/30 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-600 text-lg" data-icon="directions_railway">directions_railway</span>
+<span class="text-sm font-medium text-[#F5F0EA]">Kumta Railway Station</span>
+</div>
+<div class="text-right">
+<div class="text-sm font-semibold text-amber-400">2.0 km</div>
+<div class="text-[10px] text-[#7A7268]">5 min drive</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-[#151A22] border border-neutral-800 hover:border-amber-700/30 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-600 text-lg" data-icon="temple_hindu">temple_hindu</span>
+<span class="text-sm font-medium text-[#F5F0EA]">Gokarna &amp; Om Beach</span>
+</div>
+<div class="text-right">
+<div class="text-sm font-semibold text-amber-400">35 km</div>
+<div class="text-[10px] text-[#7A7268]">45 min drive</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-[#151A22] border border-neutral-800 hover:border-amber-700/30 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-600 text-lg" data-icon="fort">fort</span>
+<span class="text-sm font-medium text-[#F5F0EA]">Mirjan Fort</span>
+</div>
+<div class="text-right">
+<div class="text-sm font-semibold text-amber-400">25 km</div>
+<div class="text-[10px] text-[#7A7268]">30 min drive</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-[#151A22] border border-neutral-800 hover:border-amber-700/30 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-600 text-lg" data-icon="landscape">landscape</span>
+<span class="text-sm font-medium text-[#F5F0EA]">Yana Rock Caves</span>
+</div>
+<div class="text-right">
+<div class="text-sm font-semibold text-amber-400">30 km</div>
+<div class="text-[10px] text-[#7A7268]">40 min drive</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-[#151A22] border border-neutral-800 hover:border-amber-700/30 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-600 text-lg" data-icon="statue">qr_code_2</span>
+<span class="text-sm font-medium text-[#F5F0EA]">Murudeshwar Temple</span>
+</div>
+<div class="text-right">
+<div class="text-sm font-semibold text-amber-400">65 km</div>
+<div class="text-[10px] text-[#7A7268]">1.2 hr drive</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-[#151A22] border border-neutral-800 hover:border-amber-700/30 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-600 text-lg" data-icon="alt_route">alt_route</span>
+<span class="text-sm font-medium text-[#F5F0EA]">Karwar Port Town</span>
+</div>
+<div class="text-right">
+<div class="text-sm font-semibold text-amber-400">55 km</div>
+<div class="text-[10px] text-[#7A7268]">1 hr drive</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-[#151A22] border border-neutral-800 hover:border-amber-700/30 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-600 text-lg" data-icon="location_city">location_city</span>
+<span class="text-sm font-medium text-[#F5F0EA]">Mangalore International</span>
+</div>
+<div class="text-right">
+<div class="text-sm font-semibold text-amber-400">120 km</div>
+<div class="text-[10px] text-[#7A7268]">2.5 hr drive</div>
+</div>
+</div>
+</div>
+<!-- Assistance Note -->
+<div class="mt-6 p-4 rounded-xl bg-amber-950/20 border border-amber-700/30 text-xs text-[#B8B0A8] flex items-start gap-2.5">
+<span class="material-symbols-outlined text-amber-500 text-base mt-0.5" data-icon="support_agent">support_agent</span>
+<span>Need customized route guidance or driver contact? Message our front desk on WhatsApp before embarking on your trip.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- NEIGHBORHOOD & LOCAL SETTING (ATMOSPHERIC EDITORIAL) -->
+<section class="py-20 md:py-28 bg-[#0F1218] relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Image Collage -->
+<div class="lg:col-span-6 relative">
+<div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-neutral-800 aspect-[4/3]">
+<img class="w-full h-full object-cover" data-alt="A serene morning view of the calm Aghanashini river estuary in Kumta Karnataka, with traditional wooden fisherman canoes gliding silently across glassy water during golden sunrise. Fringing the tranquil water are dense groves of swaying coconut palms and terracotta tiled coastal cottage rooftops bathed in warm morning light." src="images/waterfront.jpeg"/>
+</div>
+<!-- Overlapping Decorative Inset Card -->
+<div class="absolute -bottom-8 -right-4 sm:-right-8 z-20 w-3/5 rounded-xl overflow-hidden shadow-2xl border border-amber-700/30 hidden sm:block aspect-video">
+<img class="w-full h-full object-cover" data-alt="An authentic coastal Karnataka heritage veranda overlooking lush tropical greenery, featuring warm terracotta red floor tiles, carved teakwood pillar details, brass oil lamps, and a cozy wicker lounger basking in warm golden twilight." src="images/balcony.jpeg"/>
+</div>
+<div class="absolute -top-4 -left-4 w-32 h-32 border-t-2 border-l-2 border-amber-600/40 rounded-tl-3xl pointer-events-none"></div>
+</div>
+<!-- Editorial Text -->
+<div class="lg:col-span-6 lg:pl-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/40 border border-amber-700/30 text-amber-500 text-xs font-semibold uppercase tracking-wider mb-4">
+              Local Ambiance
+            </div>
+<h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-[#F5F0EA] leading-tight mb-6">
+              Where the Calm Estuary <br/><span class="italic text-amber-500">Meets the Arabian Tide</span>
+</h2>
+<div class="space-y-4 text-[#B8B0A8] font-light leading-relaxed text-sm md:text-base">
+<p>
+                Unlike commercial tourist hubs, Kumta remains one of Karnataka’s quietest coastal secrets. Here, days are measured by the gentle rhythmic tides of the Aghanashini river estuary and the evening ocean breezes filtering through coconut fronds.
+              </p>
+<p>
+                Wake up to the soft calls of river kingfishers and white-bellied sea eagles circling over the backwaters. From our open verandas, you can watch local artisanal fishermen maneuvering hand-hewn wooden canoes at dawn.
+              </p>
+<p>
+                Step out through private sandy pathways that lead directly toward secluded, uncrowded shores where fine golden sand stretches uninterrupted for miles. Kumta offers authentic Konkan coastal tranquility at its most raw and poetic.
+              </p>
+</div>
+<div class="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-neutral-800">
+<div>
+<div class="text-2xl font-serif text-amber-500 font-bold">800m</div>
+<div class="text-xs text-[#7A7268] mt-1">Walk to Beach</div>
+</div>
+<div>
+<div class="text-2xl font-serif text-amber-500 font-bold">Zero</div>
+<div class="text-xs text-[#7A7268] mt-1">Commercial Crowds</div>
+</div>
+<div>
+<div class="text-2xl font-serif text-amber-500 font-bold">100%</div>
+<div class="text-xs text-[#7A7268] mt-1">Coastal Heritage</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- NEARBY ATTRACTIONS (CURATED CARD GRID) -->
+<section class="py-20 md:py-28 bg-[#151A22]/40 border-t border-neutral-800/80">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+<div>
+<p class="text-xs uppercase tracking-widest text-amber-600 font-semibold mb-2">Excursions &amp; Day Trips</p>
+<h2 class="text-3xl sm:text-4xl font-serif text-[#F5F0EA]">Nearby Attractions &amp; Heritage</h2>
+</div>
+<p class="text-xs md:text-sm text-[#B8B0A8] mt-3 md:mt-0 max-w-md">
+            Use Seaside Guest House as your peaceful coastal home base to discover ancient rock formations, historic forts, and sacred temples.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: Kumta Beach -->
+<div class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col group">
+<div class="h-52 w-full relative overflow-hidden bg-neutral-900">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A wide golden sand beach in Kumta Karnataka, with gentle ocean foam rolling onto pristine tranquil shores under a dramatic sunset sky tinted with apricot, amber, and deep dusk blue. Completely free from commercial crowds with gentle coconut palms lining the far edge." src="images/seapath.jpeg"/>
+<span class="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-neutral-950/80 text-[11px] font-medium text-amber-400 border border-neutral-700 backdrop-blur-sm">
+                10 min stroll
+              </span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-serif text-[#F5F0EA] mb-2 group-hover:text-amber-500 transition-colors">Kumta Pristine Beach</h3>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">
+                  Secluded sandy stretches along the open Arabian Sea. Ideal for serene morning barefoot walks, shell gathering, and mesmerizing coastal sunsets without commercial noise.
+                </p>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs text-amber-600 font-medium">
+<span>Distance: 800 meters</span>
+<span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Mirjan Fort -->
+<div class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col group">
+<div class="h-52 w-full relative overflow-hidden bg-neutral-900">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An ancient 16th-century coastal fortress Mirjan Fort in Karnataka made of weathered laterite stone blocks with majestic octagonal battlements and arched passages, enveloped by lush emerald green moss and serene moat waters beneath a moody cloudy coastal sky." src="images/streetview.jpeg"/>
+<span class="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-neutral-950/80 text-[11px] font-medium text-amber-400 border border-neutral-700 backdrop-blur-sm">
+                30 min drive
+              </span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-serif text-[#F5F0EA] mb-2 group-hover:text-amber-500 transition-colors">Mirjan Fort</h3>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">
+                  A historic 16th-century laterite stone citadel once ruled by Queen Chennabhairadevi (The Pepper Queen). Renowned for its elegant bastions, watchtowers, and moats.
+                </p>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs text-amber-600 font-medium">
+<span>Distance: 25 km</span>
+<span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Gokarna & Om Beach -->
+<div class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col group">
+<div class="h-52 w-full relative overflow-hidden bg-neutral-900">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A dramatic panoramic view of Om Beach in Gokarna Karnataka, showing the distinctive double crescent shape formed naturally by dark granite coastal cliffs and turquoise waves, dotted with wooden boats under clear azure skies." src="images/coastalroad.jpeg"/>
+<span class="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-neutral-950/80 text-[11px] font-medium text-amber-400 border border-neutral-700 backdrop-blur-sm">
+                45 min drive
+              </span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-serif text-[#F5F0EA] mb-2 group-hover:text-amber-500 transition-colors">Gokarna &amp; Om Beach</h3>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">
+                  Famous pilgrimage temple town with holy Mahabaleshwar shrine, cliff-top hiking trails, and picturesque coastline including Kudle, Half Moon, and Om Beach.
+                </p>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs text-amber-600 font-medium">
+<span>Distance: 35 km</span>
+<span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Yana Caves -->
+<div class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col group">
+<div class="h-52 w-full relative overflow-hidden bg-neutral-900">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Towering black crystalline limestone karst rock formations of Yana Rocks rising monolithically out of dense subtropical evergreen jungle canopy of the Western Ghats in Karnataka, with misty sun rays piercing through the forest foliage." src="images/riverpath.jpeg"/>
+<span class="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-neutral-950/80 text-[11px] font-medium text-amber-400 border border-neutral-700 backdrop-blur-sm">
+                40 min drive
+              </span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-serif text-[#F5F0EA] mb-2 group-hover:text-amber-500 transition-colors">Yana Rock Caves</h3>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">
+                  Two colossal solid black karst rock monoliths (Bhairaveshwara &amp; Mohini Shikhara) hidden in pristine Sahyadri rainforest. A mystical jungle trek experience.
+                </p>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs text-amber-600 font-medium">
+<span>Distance: 30 km</span>
+<span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</div>
+</div>
+</div>
+<!-- Card 5: Murudeshwar -->
+<div class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col group">
+<div class="h-52 w-full relative overflow-hidden bg-neutral-900">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="The towering second tallest colossal statue of Lord Shiva at Murudeshwar perched high atop a coastal peninsula overlooking the vast Arabian Sea in Karnataka, with sea spray rising against rugged rocks and ancient coastal architecture in golden late afternoon sun." src="images/seapath.jpeg"/>
+<span class="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-neutral-950/80 text-[11px] font-medium text-amber-400 border border-neutral-700 backdrop-blur-sm">
+                1.2 hr drive
+              </span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-serif text-[#F5F0EA] mb-2 group-hover:text-amber-500 transition-colors">Murudeshwar Temple &amp; Sea</h3>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">
+                  Home to the world's second-tallest Shiva statue rising dramatically over the sea, surrounded by a 20-story Rajagopura tower offering panoramic ocean lookouts.
+                </p>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs text-amber-600 font-medium">
+<span>Distance: 65 km</span>
+<span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</div>
+</div>
+</div>
+<!-- Card 6: Aghanashini Mangrove Estuary -->
+<div class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col group">
+<div class="h-52 w-full relative overflow-hidden bg-neutral-900">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Dense mangrove sanctuary along the tranquil Aghanashini River estuary in Kumta, with winding brackish water channels, vibrant emerald greenery, migratory herons resting on tree roots, and a traditional country wooden ferry boat resting at the bank." src="images/backwater.jpg"/>
+<span class="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-neutral-950/80 text-[11px] font-medium text-amber-400 border border-neutral-700 backdrop-blur-sm">
+                On doorstep
+              </span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-serif text-[#F5F0EA] mb-2 group-hover:text-amber-500 transition-colors">Aghanashini Estuary Boat Rides</h3>
+<p class="text-xs text-[#B8B0A8] leading-relaxed">
+                  Take slow wooden canoe journeys through rich brackish mangrove biospheres. Home to diverse migratory birds, mud crabs, and undisturbed tidal backwaters.
+                </p>
+</div>
+<div class="mt-4 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs text-amber-600 font-medium">
+<span>Distance: 150 meters</span>
+<span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CALL TO ACTION BANNER (TERRACOTTA THEME ACCENT) -->
+<section class="py-16 md:py-24 relative overflow-hidden" id="book">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="relative rounded-3xl overflow-hidden p-8 md:p-14 bg-gradient-to-br from-[#C4613A] via-[#A84C28] to-[#8C3C1E] shadow-2xl border border-amber-600/30">
+<!-- Decorative Background Elements -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-amber-500/20 blur-2xl pointer-events-none"></div>
+<div class="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-black/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/20 backdrop-blur-sm text-white/90 text-xs font-semibold uppercase tracking-wider mb-4 border border-white/10">
+<span class="material-symbols-outlined text-xs" data-icon="verified">verified</span>
+              Direct Host Communication
+            </div>
+<h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-[#F5F0EA] font-bold leading-tight mb-4">
+              Ready to Experience Seaside?
+            </h2>
+<p class="text-base md:text-lg text-white/90 font-light leading-relaxed mb-8 max-w-2xl">
+              Reserve directly with us for personalized travel advice, local train station pickup guidance, and direct confirmation without third-party commissions.
+            </p>
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-semibold text-sm shadow-xl shadow-black/20 transition-all duration-200 active:scale-95" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xl" data-icon="chat" data-weight="fill" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span>Book via WhatsApp</span>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-neutral-950/60 hover:bg-neutral-950 text-white font-medium text-sm border border-white/20 transition-all duration-200" href="tel:+910000000000">
+<span class="material-symbols-outlined text-lg" data-icon="call">call</span>
+<span>Contact Host</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER (SHARED COMPONENT) -->
+<footer class="bg-neutral-950 dark:bg-neutral-950 border-t border-neutral-800">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col gap-10 w-full">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 justify-between items-start">
+<!-- Brand Info -->
+<div class="md:col-span-5 space-y-4">
+<div class="font-serif italic text-xl font-bold text-stone-100 dark:text-stone-100 flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600" data-icon="water_lux">water_lux</span>
+<span>Seaside Guest House</span>
+</div>
+<p class="text-xs text-stone-400 dark:text-stone-400 max-w-sm leading-relaxed">
+            A traditional boutique coastal sanctuary nestled along the quiet Aghanashini estuary in Kumta, Karnataka. Preserving local Konkan heritage and slow coastal living.
+          </p>
+<div class="flex items-center gap-3 text-xs text-stone-400">
+<span class="material-symbols-outlined text-amber-600 text-sm" data-icon="pin_drop">pin_drop</span>
+<span>Aghanashini Estuary Road, Kumta, Karnataka 581343</span>
+</div>
+</div>
+<!-- Links Navigation -->
+<div class="md:col-span-7 flex flex-wrap gap-x-8 gap-y-3 md:justify-end items-center text-sm pt-2">
+<a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">About Kumta</a>
+<a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Rooms &amp; Suites</a>
+<a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Experiences</a>
+<a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Local Cuisine</a>
+<a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">House Rules</a>
+<a class="text-stone-400 dark:text-stone-400 hover:text-stone-200 dark:hover:text-stone-200 transition-colors" href="#">Privacy Policy</a>
+<a class="text-stone-100 dark:text-stone-100 font-medium" href="#">Contact &amp; Directions</a>
+</div>
+</div>
+<!-- Copyright Bar -->
+<div class="pt-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+<p>© 2024 Seaside Guest House, Kumta, Karnataka. All rights reserved. Where the River Meets the Sea.</p>
+<div class="flex items-center gap-4 text-stone-400">
+<span class="hover:text-amber-500 cursor-pointer transition-colors">Instagram</span>
+<span>•</span>
+<span class="hover:text-amber-500 cursor-pointer transition-colors">WhatsApp Direct</span>
+<span>•</span>
+<span class="hover:text-amber-500 cursor-pointer transition-colors">Google Maps</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Navbar Toggle & Motion Scripts -->
+<script>
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        if (menuIcon) {
+          menuIcon.textContent = isHidden ? 'menu' : 'close';
+        }
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          if (menuIcon) menuIcon.textContent = 'menu';
+        });
+      });
+    }
+
+    // Scroll Reveal Observer
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { root: null, threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Navbar Scroll Elevation
+    const header = document.querySelector('header');
+    if (header) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }, { passive: true });
+    }
+</script>
+</body></html>
