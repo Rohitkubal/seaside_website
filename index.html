@@ -109,6 +109,134 @@
       box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7) !important;
       border-color: rgba(42, 48, 64, 0.95) !important;
     }
+
+    /* Refine only the existing, centered homepage hero. */
+    #home .home-hero__content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 1120px;
+      margin-inline: auto;
+      padding-inline: 24px;
+      text-align: center;
+    }
+    #home .home-hero__location {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border: 1px solid rgba(232, 149, 109, 0.4);
+      border-radius: 999px;
+      background: rgba(21, 26, 34, 0.72);
+      backdrop-filter: blur(12px);
+      color: #E8AD8B;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    #home .home-hero__location .material-symbols-outlined { font-size: 16px; }
+    #home .home-hero__title {
+      margin: 24px 0 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.7rem, 5.5vw, 5rem);
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      color: #F5F0EA;
+      text-wrap: balance;
+      text-shadow: 0 3px 24px rgba(0, 0, 0, 0.18);
+    }
+    #home .home-hero__tagline {
+      margin: 16px 0 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.35rem, 2.5vw, 2rem);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.4;
+      color: #E3A17A;
+      text-wrap: balance;
+    }
+    #home .home-hero__description {
+      max-width: 700px;
+      margin: 22px 0 0;
+      font-size: clamp(0.95rem, 1.4vw, 1.075rem);
+      font-weight: 400;
+      line-height: 1.85;
+      color: #DDD4CC;
+      text-wrap: pretty;
+    }
+    #home .home-hero__actions {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 12px;
+      width: 100%;
+      max-width: 340px;
+      margin-top: 36px;
+    }
+    #home .home-hero__button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 58px;
+      padding: 16px 20px;
+      border: 1px solid rgba(245, 240, 234, 0.35);
+      border-radius: 12px;
+      background: rgba(19, 25, 32, 0.72);
+      backdrop-filter: blur(12px);
+      color: #F5F0EA;
+      font-size: 13.5px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+    }
+    #home .home-hero__button .material-symbols-outlined { flex-shrink: 0; font-size: 19px; }
+    #home .home-hero__button--whatsapp {
+      border-color: #42A86B;
+      background: #19874A;
+      color: #FFFFFF;
+    }
+    #home .home-hero__button--airbnb {
+      border-color: #E27B84;
+      background: #C54E59;
+      color: #FFFFFF;
+    }
+    #home .home-hero__button--booking {
+      border-color: #5B8DC8;
+      background: #2868AF;
+      color: #FFFFFF;
+    }
+    #home .home-hero__button:focus-visible {
+      outline: 2px solid #F5F0EA;
+      outline-offset: 4px;
+    }
+    @media (hover: hover) {
+      #home .home-hero__button:hover {
+        transform: translateY(-3px);
+        border-color: rgba(245, 240, 234, 0.7);
+        background: rgba(36, 43, 52, 0.9);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+      }
+      #home .home-hero__button--whatsapp:hover { background: #178047; border-color: #42A86B; }
+      #home .home-hero__button--airbnb:hover { background: #BA4752; border-color: #E27B84; }
+      #home .home-hero__button--booking:hover { background: #235F9F; border-color: #5B8DC8; }
+    }
+    @media (min-width: 768px) {
+      #home .home-hero__content { padding-inline: 48px; }
+      #home .home-hero__location { font-size: 11px; }
+      #home .home-hero__actions { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; max-width: 820px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #home .home-hero__button { transition: none; }
+      #home .home-hero__button:hover { transform: none; }
+    }
   </style>
 </head>
 <body class="bg-[#0F1218] text-[#F5F0EA] font-body selection:bg-[#C4613A] selection:text-white antialiased overflow-x-hidden">
@@ -203,40 +331,40 @@
 <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218]/90 via-[#0F1218]/40 to-[#0F1218]/20"></div>
 <div class="absolute inset-0 bg-gradient-to-r from-[#0F1218]/60 via-transparent to-[#0F1218]/60"></div>
 <!-- Hero Content -->
-<div class="relative z-10 max-w-5xl mx-auto px-6 md:px-12 text-center flex flex-col items-center">
+<div class="home-hero__content">
 <!-- Location Badge -->
-<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1C2330]/80 border border-[#C4613A]/40 backdrop-blur-md mb-6 shadow-lg">
-<span class="material-symbols-outlined text-[#C4613A] text-sm">location_on</span>
-<span class="text-xs uppercase tracking-widest font-semibold text-[#E8956D]">Kumta, Karnataka, India</span>
+<div class="home-hero__location">
+<span aria-hidden="true" class="material-symbols-outlined">location_on</span>
+<span>Kumta, Karnataka, India</span>
 </div>
 <!-- Main Headline -->
-<h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#F5F0EA] leading-tight mb-3">
+<h1 class="home-hero__title">
           Seaside Guest House
         </h1>
 <!-- Italic Tagline -->
-<p class="font-serif italic text-2xl sm:text-3xl text-[#C4613A] mb-6 font-medium">
+<p class="home-hero__tagline">
           Where the River Meets the Sea
         </p>
 <!-- Descriptive Body Copy -->
-<p class="max-w-2xl text-base sm:text-lg text-[#B8B0A8] leading-relaxed mb-10 font-normal">
+<p class="home-hero__description">
           A traditional coastal retreat nestled between the backwaters and the Arabian Sea. Wake up to the sound of waves, the rustling of coconut palms, and the serenity of untouched Karnataka coastline.
         </p>
 <!-- Action CTAs -->
-<div class="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-4 w-full sm:w-auto">
+<div class="home-hero__actions">
 <!-- WhatsApp Booking Button -->
-<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-medium shadow-xl hover:shadow-[#25D366]/20 transition-all duration-200 active:scale-95 text-base" href="https://wa.me/917676475931" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-xl">phone_iphone</span>
-<span>📲 Book via WhatsApp</span>
+<a class="home-hero__button home-hero__button--whatsapp" href="https://wa.me/917676475931" rel="noopener noreferrer" target="_blank">
+<span aria-hidden="true" class="material-symbols-outlined">chat</span>
+<span>Book via WhatsApp</span>
 </a>
 <!-- Secondary Link: Airbnb -->
-<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#FF5A5F] hover:bg-[#e0484d] text-white border border-[#FF5A5F] transition-all duration-200 active:scale-95 text-base font-medium shadow-lg" href="https://www.airbnb.co.in/rooms/1754501200326210708" rel="noopener noreferrer" target="_blank">
+<a class="home-hero__button home-hero__button--airbnb" href="https://www.airbnb.co.in/rooms/1754501200326210708" rel="noopener noreferrer" target="_blank">
 <span>View on Airbnb</span>
-<span class="material-symbols-outlined text-lg">arrow_forward</span>
+<span aria-hidden="true" class="material-symbols-outlined">north_east</span>
 </a>
 <!-- Booking.com Listing -->
-<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#003B95] hover:bg-[#0057B8] text-white border border-[#4D8DDE] transition-all duration-200 active:scale-95 text-base font-medium" href="https://www.booking.com/Share-jDr2eh" rel="noopener noreferrer" target="_blank">
+<a class="home-hero__button home-hero__button--booking" href="https://www.booking.com/Share-jDr2eh" rel="noopener noreferrer" target="_blank">
 <span>View on Booking.com</span>
-<span class="material-symbols-outlined text-lg">open_in_new</span>
+<span aria-hidden="true" class="material-symbols-outlined">north_east</span>
 </a>
 </div>
 </div>
