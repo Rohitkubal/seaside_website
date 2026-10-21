@@ -742,8 +742,6 @@
 <div class="pt-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
 <p>© 2024 Seaside Guest House, Kumta, Karnataka. All rights reserved. Where the River Meets the Sea.</p>
 <div class="flex items-center gap-4 text-stone-400">
-<span class="hover:text-amber-500 cursor-pointer transition-colors">Instagram</span>
-<span>•</span>
 <span class="hover:text-amber-500 cursor-pointer transition-colors">WhatsApp Direct</span>
 <span>•</span>
 <span class="hover:text-amber-500 cursor-pointer transition-colors">Google Maps</span>
