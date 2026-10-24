@@ -286,36 +286,258 @@
 </div>
 <!-- Masonry-style Bento Grid -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" id="gallery-grid">
-<template id="legacy-gallery-cards">
-<!-- ================= GROUP C: THE ROOMS (FEATURED HERO CARD 1) ================= -->
-<!-- Card 8: Master Heritage Bedroom (Uses https://lh3.googleusercontent.com/aida/AEtjO1V4JbNlET2Kl_qxwMWKXSQ-TYpYUzvjbgVPtaFvcXnC_mODkAcYSEbu_ttsMbS6tDegrMpn9p9lmQlB7VCMIwjCKaCcXAd0X71_0EyuBMS6aPuqBQK4MkYVipCq88wKN0CGAOfdI46Dng_qGDHGGwNLKSYayPMjVYqE-4-t-KcL4hG7f0rCH3Iline-xt1tKc_q-TN1Cgb1A-Fng3I-FYw6chqusMEENMPoddNt1opDVDu4HSYG9N0e8Wg) -->
-<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 sm:col-span-2 lg:col-span-2 shadow-lg" data-category="rooms">
-<div class="relative aspect-[16/9] w-full overflow-hidden bg-[#151A22]">
-<img alt="Master Heritage Bedroom at Seaside Guest House Kumta" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" src="images/bedroom-window.jpeg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-[#0F1218]/30 to-transparent opacity-85 group-hover:opacity-75 transition-opacity"></div>
-<!-- Category Pill -->
-<div class="absolute top-4 left-4 z-10">
-<span class="px-3 py-1 rounded-full text-xs font-medium bg-[#C4613A] text-[#F5F0EA] shadow-md">
-              The Rooms • Master Heritage
-            </span>
-</div>
-<!-- Bottom Caption Overlay -->
-<div class="absolute bottom-0 inset-x-0 p-6 z-10">
-<div class="flex items-end justify-between">
-<div>
-<span class="text-xs uppercase tracking-widest text-[#E8956D] font-semibold">Interiors &amp; Suites</span>
-<h3 class="font-serif text-xl sm:text-2xl font-bold text-[#F5F0EA] mt-1">Master Heritage Bedroom</h3>
-<p class="text-sm text-[#B8B0A8] max-w-lg mt-1 line-clamp-2">
-                  Carved teak four-poster bed with romantic mosquito netting, rustic terracotta floor tiles, and tall wooden window shutters opening directly to the calm Aghanashini river at twilight.
-                </p>
-</div>
-<button class="hidden sm:flex items-center justify-center w-10 h-10 rounded-full bg-[#1C2330]/80 backdrop-blur-md text-[#F5F0EA] border border-[#2A3040] group-hover:bg-[#C4613A] transition-colors">
-<span class="material-symbols-outlined text-lg">fullscreen</span>
-</button>
+<template id="rooms-gallery-cards">
+<!-- Room photos in the supplied order. -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Guest room with a double bed, patterned curtains, and air conditioning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-guest-room-ac.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Guest Room</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Comfortable Guest Room</h3><p class="text-xs text-[#B8B0A8] mt-1">A double bed, patterned curtains, and air conditioning.</p></div>
 </div>
 </div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Air-conditioned bedroom corner with yellow walls, curtains, and a red bedspread" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-room-ac-corner.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Bedroom Corner</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Air-Conditioned Bedroom</h3><p class="text-xs text-[#B8B0A8] mt-1">Warm yellow walls beneath a wood-paneled ceiling.</p></div>
 </div>
 </div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Double bedroom with a carved wooden bed, wardrobe, and patterned curtains" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-room-wardrobe.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Double Bedroom</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Double Bedroom &amp; Wardrobe</h3><p class="text-xs text-[#B8B0A8] mt-1">A homely room with wooden furnishings and bedside storage.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Wooden guest bed with built-in drawers, red bedding, and a folded blue blanket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-06.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Furnishings</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Wooden Bed &amp; Storage</h3><p class="text-xs text-[#B8B0A8] mt-1">A closer look at the bed and its built-in drawers.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Guest bedroom with a wardrobe, carved wooden door, and bedside table" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-07.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Interior</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Bedroom Interior</h3><p class="text-xs text-[#B8B0A8] mt-1">A wardrobe and bedside table beside the wooden bed.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="White pedestal washbasin and oval mirror beside a glass-block window" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-10.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Wash Area</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Washbasin &amp; Mirror</h3><p class="text-xs text-[#B8B0A8] mt-1">A bright wash area beside the glass-block window.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Bathroom with warm-toned tiles, a toilet, and a wall-mounted water heater" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-11.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Bathroom</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest Bathroom</h3><p class="text-xs text-[#B8B0A8] mt-1">Warm-toned tiles and a wall-mounted water heater.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Side view of a guest bed with magenta bedding and matching pillows" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-15.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Bedding</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest Bed — Side View</h3><p class="text-xs text-[#B8B0A8] mt-1">Magenta bedding and matching pillows in the guest room.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Front view of a guest bed with magenta bedding against cream walls" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-16.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Bedding</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest Bed — Front View</h3><p class="text-xs text-[#B8B0A8] mt-1">A front-facing view of the bed and its matching linens.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Guest bedroom with a wooden bed, patterned curtains, and a wall-mounted washbasin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-18.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Guest Bedroom</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Bedroom with Washbasin</h3><p class="text-xs text-[#B8B0A8] mt-1">A wooden bed beside the room's wash area and patterned curtains.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Guest bedroom doorway opening toward a wardrobe and adjoining hall" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-bedroom-doorway.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Entrance</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Bedroom Doorway &amp; Hall</h3><p class="text-xs text-[#B8B0A8] mt-1">A glimpse from the bedroom toward the adjoining space.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Wood-framed bedroom window with patterned curtains beside a washbasin and oval mirror" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-19.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Window &amp; Wash Area</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Window &amp; Wash Area</h3><p class="text-xs text-[#B8B0A8] mt-1">Patterned curtains frame the window beside the basin and mirror.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Compact warm-toned bathroom stall at Seaside Guest House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-20.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Bathroom</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Warm-Toned Bathroom</h3><p class="text-xs text-[#B8B0A8] mt-1">A closer look inside the compact guest bathroom.</p></div>
+</div>
+</div>
+</template>
+<template id="parking-exterior-gallery-cards">
+<!-- Parking photos supplied for the Parking category. -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="parking" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Covered parking area with a guest vehicle beside the property" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-25.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">Parking • Covered Parking</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Covered Guest Parking</h3><p class="text-xs text-[#B8B0A8] mt-1">A covered parking bay beside the guest house.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="parking" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Spacious covered parking shelter surrounded by coconut palms and greenery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-26.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">Parking • Parking Shelter</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Garden Parking Shelter</h3><p class="text-xs text-[#B8B0A8] mt-1">A spacious sheltered parking area framed by palms and greenery.</p></div>
+</div>
+</div>
+<!-- Exterior photos supplied for the Exteriors category. -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="exteriors" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Colorful exterior wall of Seaside Guest House surrounded by coconut palms" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-guest-house-exterior.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Property • Exterior</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Riverside Guest House Exterior</h3><p class="text-xs text-[#B8B0A8] mt-1">Warm coastal colors, palms, and the guest house facade.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="exteriors" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Seaside Guest House gate, garden, and river-facing surroundings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/riverpath.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Property • Grounds</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Garden &amp; River Grounds</h3><p class="text-xs text-[#B8B0A8] mt-1">Lush tropical grounds and the property gate near the river.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="exteriors" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Traditional guest house exterior with a textured wall and covered walkway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-exterior-night-wall.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Property • Exterior Wall</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Textured Exterior Wall</h3><p class="text-xs text-[#B8B0A8] mt-1">A covered walkway with textured walls and warm coastal details.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="exteriors" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Night view of the guest house exterior with textured walls, lighting, and a covered veranda" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-exterior-night-veranda.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Property • Night Exterior</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Illuminated Night Exterior</h3><p class="text-xs text-[#B8B0A8] mt-1">Warm lighting highlights the textured walls and covered veranda after dark.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="exteriors" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Covered guest house corridor with textured exterior walls, windows, and a tiled roof" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-22.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Property • Covered Corridor</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Covered Exterior Corridor</h3><p class="text-xs text-[#B8B0A8] mt-1">A sheltered walkway framed by textured walls and traditional roofing.</p></div>
+</div>
+</div>
+ </template>
+<template id="views-surroundings-gallery-cards">
+<!-- Views photos supplied for the Views category. -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="views" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Tropical riverside view with coconut palms and the guest house grounds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-30.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Setting • Views</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Tropical Riverside View</h3><p class="text-xs text-[#B8B0A8] mt-1">Coconut palms and lush greenery beside the calm riverside.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="views" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Scenic tropical landscape viewed from the Seaside Guest House property" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-28.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Setting • Views</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Seaside Guest House Outlook</h3><p class="text-xs text-[#B8B0A8] mt-1">A peaceful tropical outlook from the property.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="views" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Riverside view from a covered guest house walkway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-riverside-corridor.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Setting • Riverside View</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Covered Walkway View</h3><p class="text-xs text-[#B8B0A8] mt-1">A sheltered walkway opening toward the riverside surroundings.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="views" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Calm backwater view framed by tropical greenery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/waterfront.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Setting • Backwaters</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Calm Backwater Landscape</h3><p class="text-xs text-[#B8B0A8] mt-1">Quiet water and tropical greenery surrounding the guest house.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="views" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Bedroom window view toward palms and the surrounding landscape" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-bedroom-river-window.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Setting • Room View</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Bedroom Window View</h3><p class="text-xs text-[#B8B0A8] mt-1">Tropical greenery and the riverside landscape beyond the room.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="views" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Sunset over the calm backwaters and coastal landscape near Seaside Guest House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-view-2026-10-24.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Setting • Sunset View</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Sunset Backwater View</h3><p class="text-xs text-[#B8B0A8] mt-1">A peaceful sunset reflected across the calm coastal backwaters.</p></div>
+</div>
+</div>
+<!-- Surroundings photos supplied for the Surroundings category. -->
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="surroundings" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Tropical surroundings and riverside greenery near Seaside Guest House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/seapath.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">Surroundings • Tropical Greenery</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Tropical Riverside Surroundings</h3><p class="text-xs text-[#B8B0A8] mt-1">Lush greenery and calm coastal landscapes around Kumta.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="surroundings" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Tropical garden and entrance gate surrounding Seaside Guest House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/streetview.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">Surroundings • Garden</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Tropical Garden Gateway</h3><p class="text-xs text-[#B8B0A8] mt-1">Greenery, paths, and a quiet entrance near the guest house.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="surroundings" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Seaside Guest House exterior and covered walkway at night" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-29.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">Surroundings • Night Walkway</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Nighttime Guest House Walkway</h3><p class="text-xs text-[#B8B0A8] mt-1">A warmly lit covered walkway in the tropical night.</p></div>
+</div>
+</div>
+<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="surroundings" data-gallery-batch="new">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
+<img alt="Coastal road and tropical surroundings near Seaside Guest House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/coastalroad.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
+<div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">Surroundings • Coastal Road</span></div>
+<div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Coastal Road Surroundings</h3><p class="text-xs text-[#B8B0A8] mt-1">A tropical coastal route through the landscape around Kumta.</p></div>
+</div>
+</div>
+ </template>
+ <template id="legacy-gallery-cards">
 <!-- ================= GROUP A: THE SETTING (CARD 1) ================= -->
 <!-- Card 1: Backwater Estuary View at Sunrise -->
 <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="views">
@@ -330,33 +552,6 @@
 <div class="absolute bottom-0 inset-x-0 p-5 z-10">
 <h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Aghanashini Estuary Sunrise</h3>
 <p class="text-xs text-[#B8B0A8] mt-1">Calm morning waters reflecting dawn skies amidst coconut palm groves.</p>
-</div>
-</div>
-</div>
-<!-- ================= GROUP C: THE ROOMS (CARD 9 - FEATURED 2) ================= -->
-<!-- Card 9: Garden Suite Bedroom (Uses https://lh3.googleusercontent.com/aida/AEtjO1VHGekRmO5wPwV1JcZymQa_v1gm9cVZdLeKi_4Y_TqWMaE6uFJGGwpCXi2pjj7wsEvwAc_MRgkMWCdhSDNhvRmusSXDjb8TLCx19J3B6INxdtfzleEayiUhne6dkM7dkISHGRitR3d8CtpgrBeokS10Mxv8n3jWEH3WF5T1l-tsms1IJ1_kJ7M4FBBE4wm5F0SOOckOAh2I_4qiTTLFYnAOBZCQD2dzXsGOYdc7l3tgMWgj1DyV87RhvxI) -->
-<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 sm:col-span-2 lg:col-span-2 shadow-lg" data-category="rooms">
-<div class="relative aspect-[16/9] w-full overflow-hidden bg-[#151A22]">
-<img alt="Garden Suite bedroom veranda at Seaside Guest House Kumta" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" src="images/balcony.jpeg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-[#0F1218]/30 to-transparent opacity-85 group-hover:opacity-75 transition-opacity"></div>
-<div class="absolute top-4 left-4 z-10">
-<span class="px-3 py-1 rounded-full text-xs font-medium bg-[#C4613A] text-[#F5F0EA] shadow-md">
-              The Rooms • Garden Suite
-            </span>
-</div>
-<div class="absolute bottom-0 inset-x-0 p-6 z-10">
-<div class="flex items-end justify-between">
-<div>
-<span class="text-xs uppercase tracking-widest text-[#E8956D] font-semibold">Balcony &amp; Veranda</span>
-<h3 class="font-serif text-xl sm:text-2xl font-bold text-[#F5F0EA] mt-1">Garden Suite Tropical Veranda</h3>
-<p class="text-sm text-[#B8B0A8] max-w-lg mt-1 line-clamp-2">
-                  Double french glass doors welcoming fresh sea breezes, cane wicker seating, flowering bougainvillea, and sea views across lush tropical vegetation.
-                </p>
-</div>
-<button class="hidden sm:flex items-center justify-center w-10 h-10 rounded-full bg-[#1C2330]/80 backdrop-blur-md text-[#F5F0EA] border border-[#2A3040] group-hover:bg-[#C4613A] transition-colors">
-<span class="material-symbols-outlined text-lg">fullscreen</span>
-</button>
-</div>
 </div>
 </div>
 </div>
@@ -442,23 +637,6 @@
 <div class="absolute bottom-0 inset-x-0 p-5 z-10">
 <h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Botanical Garden Gateway</h3>
 <p class="text-xs text-[#B8B0A8] mt-1">Handcrafted timber gate amidst blooming coastal flora and stone paths.</p>
-</div>
-</div>
-</div>
-<!-- ================= GROUP C: THE ROOMS (CARD 10) ================= -->
-<!-- Card 10: En-suite Bathroom Interior -->
-<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms">
-<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An elegant boutique bathroom interior in a coastal guest house featuring natural dark slate stone tiles, warm polished teak vanity counter, and a stone basin with brass fixtures. Warm soft ambient wall sconce lighting accentuates handcrafted brass mirrors and modern amenities with 24/7 hot water geyser in an earthy aesthetic." src="images/bathroom.jpeg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
-<div class="absolute top-4 left-4 z-10">
-<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">
-              The Rooms • En-suite
-            </span>
-</div>
-<div class="absolute bottom-0 inset-x-0 p-5 z-10">
-<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Slate &amp; Teak Bath Suite</h3>
-<p class="text-xs text-[#B8B0A8] mt-1">Natural grey slate stone, brass fittings, and uninterrupted hot water.</p>
 </div>
 </div>
 </div>
@@ -558,21 +736,7 @@
  </div>
  </div>
  </div>
- <!-- ================= BATCH 3: NEW GUEST PHOTOS (CARD 22) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Guest room window opening to a palm-fringed backwater view" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/gallery-bedroom-river-window.jpeg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10">
- <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • River View</span>
- </div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10">
- <h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Bedroom Window to the Backwaters</h3>
- <p class="text-xs text-[#B8B0A8] mt-1">Wooden shutters open to palms, greenery, and calm water beyond the room.</p>
- </div>
- </div>
- </div>
- <!-- ================= BATCH 3: NEW GUEST PHOTOS (CARD 23) ================= -->
+  <!-- ================= BATCH 3: NEW GUEST PHOTOS (CARD 23) ================= -->
  <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="exteriors" data-gallery-batch="new">
  <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
  <img alt="Covered guest house veranda with polished floor and a riverside view" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/gallery-riverside-corridor.jpeg"/>
@@ -584,38 +748,6 @@
  <h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Riverside Veranda Walkway</h3>
  <p class="text-xs text-[#B8B0A8] mt-1">A bright covered walkway with traditional details and views across the water.</p>
  </div>
- </div>
- </div>
- <!-- ================= BATCH 3: NEW GUEST PHOTOS (CARD 24) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Comfortable guest room with a double bed, patterned curtains, and air conditioning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/gallery-guest-room-ac.jpg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10">
- <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Guest Room</span>
- </div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10">
- <h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Comfortable Guest Room</h3>
- <p class="text-xs text-[#B8B0A8] mt-1">A welcoming room with a double bed, soft curtains, and air conditioning.</p>
- </div>
- </div>
- </div>
- <!-- ================= BATCH 4: NEW GUEST PHOTOS (CARD 25) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 06" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-06.jpeg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 06</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
- </div>
- </div>
- <!-- ================= BATCH 4: NEW GUEST PHOTOS (CARD 26) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 07" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-07.jpeg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 07</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
  </div>
  </div>
  <!-- ================= BATCH 4: NEW GUEST PHOTOS (CARD 27) ================= -->
@@ -634,24 +766,6 @@
  <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
  <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
  <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 09</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
- </div>
- </div>
- <!-- ================= BATCH 4: NEW GUEST PHOTOS (CARD 29) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 10" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-10.jpeg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 10</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
- </div>
- </div>
- <!-- ================= BATCH 4: NEW GUEST PHOTOS (CARD 30) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 11" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-11.jpeg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 11</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
  </div>
  </div>
  <!-- ================= BATCH 4: NEW GUEST PHOTOS (CARD 31) ================= -->
@@ -681,24 +795,6 @@
  <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 14</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
  </div>
  </div>
- <!-- ================= BATCH 4: NEW GUEST PHOTOS (CARD 34) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 15" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-15.jpeg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 15</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
- </div>
- </div>
- <!-- ================= BATCH 4: NEW GUEST PHOTOS (CARD 35) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 16" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-16.jpeg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 16</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
- </div>
- </div>
  <!-- ================= BATCH 4: NEW GUEST PHOTOS (CARD 36) ================= -->
  <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
  <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
@@ -708,33 +804,6 @@
  <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 17</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
  </div>
  </div>
- <!-- ================= BATCH 4: NEW GUEST PHOTOS (CARD 37) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 18" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-18.jpg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 18</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
- </div>
- </div>
- <!-- ================= BATCH 4: NEW GUEST PHOTOS (CARD 38) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 19" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-19.jpeg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 19</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
- </div>
- </div>
- <!-- ================= BATCH 4: NEW GUEST PHOTOS (CARD 39) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 20" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-20.png"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 20</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
- </div>
- </div>
  <!-- ================= BATCH 5: NEW GUEST PHOTOS (CARD 40) ================= -->
  <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
  <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
@@ -742,15 +811,6 @@
  <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
  <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
  <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 21</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
- </div>
- </div>
- <!-- ================= BATCH 5: NEW GUEST PHOTOS (CARD 41) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 22" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-22.jpg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 22</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
  </div>
  </div>
  <!-- ================= BATCH 5: NEW GUEST PHOTOS (CARD 42) ================= -->
@@ -771,24 +831,6 @@
  <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 24</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
  </div>
  </div>
- <!-- ================= BATCH 5: NEW GUEST PHOTOS (CARD 44) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 25" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-25.jpg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 25</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
- </div>
- </div>
- <!-- ================= BATCH 5: NEW GUEST PHOTOS (CARD 45) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 26" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-26.jpeg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 26</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
- </div>
- </div>
  <!-- ================= BATCH 5: NEW GUEST PHOTOS (CARD 46) ================= -->
  <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
  <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
@@ -796,33 +838,6 @@
  <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
  <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
  <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 27</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
- </div>
- </div>
- <!-- ================= BATCH 5: NEW GUEST PHOTOS (CARD 47) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 28" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-28.jpg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 28</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
- </div>
- </div>
- <!-- ================= BATCH 5: NEW GUEST PHOTOS (CARD 48) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 29" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-29.jpeg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 29</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
- </div>
- </div>
- <!-- ================= BATCH 5: NEW GUEST PHOTOS (CARD 49) ================= -->
- <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="all" data-gallery-batch="new">
- <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
- <img alt="Seaside Guest House gallery photo 30" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="images/gallery-photo-30.jpg"/>
- <div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
- <div class="absolute top-4 left-4 z-10"><span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Gallery • New Photo</span></div>
- <div class="absolute bottom-0 inset-x-0 p-5 z-10"><h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest House Gallery Photo 30</h3><p class="text-xs text-[#B8B0A8] mt-1">A new view from Seaside Guest House.</p></div>
  </div>
  </div>
  <!-- ================= BATCH 5: NEW GUEST PHOTOS (CARD 50) ================= -->
@@ -854,34 +869,6 @@
  </div>
     </template>
  <template id="cleared-gallery-cards">
- <!-- ================= BATCH 2: NEW GUEST PHOTOS (CARD 14) ================= -->
-<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="current">
-<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
-<img alt="Guest bedroom with a wooden bed and attached washbasin at Seaside Guest House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/gallery-room-sink.jpg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
-<div class="absolute top-4 left-4 z-10">
-<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Guest Bedroom</span>
-</div>
-<div class="absolute bottom-0 inset-x-0 p-5 z-10">
-<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Guest Bedroom with Washbasin</h3>
-<p class="text-xs text-[#B8B0A8] mt-1">A warm, practical room with a carved wooden bed and attached wash area.</p>
-</div>
-</div>
-</div>
-<!-- ================= BATCH 2: NEW GUEST PHOTOS (CARD 15) ================= -->
-<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="current">
-<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
-<img alt="Cozy guest bedroom corner with a wooden bed, sink, and patterned curtains" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/gallery-room-corner.jpg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
-<div class="absolute top-4 left-4 z-10">
-<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Bedroom Corner</span>
-</div>
-<div class="absolute bottom-0 inset-x-0 p-5 z-10">
-<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Cozy Bedroom Corner</h3>
-<p class="text-xs text-[#B8B0A8] mt-1">Comfortable furnishings, soft curtains, and a calm coastal color palette.</p>
-</div>
-</div>
-</div>
 <!-- ================= BATCH 2: NEW GUEST PHOTOS (CARD 16) ================= -->
 <div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="exteriors" data-gallery-batch="current">
 <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
@@ -896,50 +883,8 @@
 </div>
 </div>
 </div>
-<!-- ================= BATCH 2: NEW GUEST PHOTOS (CARD 17) ================= -->
-<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="current">
-<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
-<img alt="Guest bedroom with a wooden bed, wardrobe, and open doorway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/gallery-room-wardrobe-open.jpg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
-<div class="absolute top-4 left-4 z-10">
-<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Storage</span>
-</div>
-<div class="absolute bottom-0 inset-x-0 p-5 z-10">
-<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Bedroom with Open Wardrobe</h3>
-<p class="text-xs text-[#B8B0A8] mt-1">A spacious view of the room, wooden furnishings, and connecting doorway.</p>
-</div>
-</div>
-</div>
-<!-- ================= BATCH 2: NEW GUEST PHOTOS (CARD 18) ================= -->
-<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="current">
-<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
-<img alt="Double bedroom with carved wooden bed, wardrobe, and patterned curtains" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/gallery-room-wardrobe.jpg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
-<div class="absolute top-4 left-4 z-10">
-<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Double Bedroom</span>
-</div>
-<div class="absolute bottom-0 inset-x-0 p-5 z-10">
-<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Double Bedroom &amp; Wardrobe</h3>
-<p class="text-xs text-[#B8B0A8] mt-1">A bright, homely double room with polished flooring and traditional furniture.</p>
-</div>
-</div>
-</div>
-<!-- ================= BATCH 2: NEW GUEST PHOTOS (CARD 19) ================= -->
-<div class="gallery-card group relative rounded-xl overflow-hidden bg-[#1C2330] border border-[#2A3040] hover:border-[#C4613A]/60 transition-all duration-300 shadow-md" data-category="rooms" data-gallery-batch="current">
-<div class="relative aspect-[4/3] w-full overflow-hidden bg-[#151A22]">
-<img alt="Guest bedroom doorway opening toward a wardrobe and adjoining hall" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/gallery-bedroom-doorway.jpg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#0F1218] via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity"></div>
-<div class="absolute top-4 left-4 z-10">
-<span class="px-2.5 py-1 rounded-full text-xs font-medium bg-[#151A22]/80 backdrop-blur-md text-[#E8956D] border border-[#2A3040]">The Rooms • Entrance</span>
-</div>
-<div class="absolute bottom-0 inset-x-0 p-5 z-10">
-<h3 class="font-serif text-lg font-bold text-[#F5F0EA]">Bedroom Doorway &amp; Hall</h3>
-<p class="text-xs text-[#B8B0A8] mt-1">A welcoming room entrance with a glimpse into the adjoining guest-house space.</p>
- </div>
- </div>
- </div>
- </div>
  </template>
+</div>
 </main>
 <!-- ========================================================================= -->
 <!-- 5. VIDEO / VIRTUAL TOUR TEASER CARD                                       -->
